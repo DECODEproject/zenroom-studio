@@ -31,6 +31,13 @@
     "@atlaskit/theme" "^4.0.3"
     "@atlaskit/tooltip" "^10.3.0"
 
+"@atlaskit/badge@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/badge/-/badge-8.0.3.tgz#d28e01485ba790cce702ed81d6d4c7a2e49fd0c6"
+  dependencies:
+    "@atlaskit/theme" "^4.0.3"
+    babel-runtime "^6.26.0"
+
 "@atlaskit/blanket@^6.0.2":
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/@atlaskit/blanket/-/blanket-6.0.3.tgz#f39aa4ea721de45bdb4b4645f7b25f58f1d8913b"
@@ -198,6 +205,14 @@
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-4.0.4.tgz#d39820e3ffd331d8b1bf7fa4f1af7694ba51c601"
   dependencies:
     prop-types "^15.5.10"
+
+"@atlaskit/toggle@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-4.0.3.tgz#b79ef17b7c8ecccf7ca897c343f90b33ec53ffc5"
+  dependencies:
+    "@atlaskit/icon" "^12.1.2"
+    "@atlaskit/theme" "^4.0.4"
+    uuid "^3.1.0"
 
 "@atlaskit/tooltip@^10.2.1", "@atlaskit/tooltip@^10.3.0":
   version "10.3.0"
