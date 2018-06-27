@@ -1,15 +1,14 @@
 // @flow
 
-import React, { Fragment } from 'react'
-import { Group } from '@vx/group'
+import React, { Fragment } from 'react';
+import { Group } from '@vx/group';
 
-import Node from './Node'
-import { getTopLeft } from '../utils/utils'
-
+import Node from './Node';
+import { getTopLeft } from '../utils/utils';
 
 function Nodes({ nodes, layout, orientation, onNodeClick }) {
-  props: Props;
-  
+  Props;
+
   return (
     <Fragment>
       {nodes.map((node, i) => (
@@ -23,7 +22,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
         </Group>
       ))}
     </Fragment>
-  )
+  );
 }
 
-export default Nodes
+export default Nodes;

@@ -1,5 +1,5 @@
-import React from 'react'
-import { LinkHorizontal } from '@vx/shape'
+import React from 'react';
+import { LinkHorizontal } from '@vx/shape';
 
 function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
   return (
@@ -11,7 +11,7 @@ function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
       fill="none"
       {...props}
     />
-  )
+  );
 }
 
-export default Link
+export default Link;

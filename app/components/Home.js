@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
 
-
 type Props = {};
 
 export default class Home extends Component<Props> {
@@ -24,7 +23,7 @@ export default class Home extends Component<Props> {
               <i className="fa fa-folder" /> open a project
             </Link>
           </GridColumn>
-          <GridColumn medium={4} /> 
+          <GridColumn medium={4} />
         </Grid>
       </Page>
     );

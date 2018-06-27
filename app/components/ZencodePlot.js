@@ -1,8 +1,8 @@
 // @flow
-import React from 'react'
-import { ParentSize } from '@vx/responsive'
-import Tree from './Tree'
-import data from './ExampleData'
+import React from 'react';
+import { ParentSize } from '@vx/responsive';
+import Tree from './Tree';
+import data from './ExampleData';
 
 const ZencodePlot = () => (
   <ParentSize>
@@ -15,7 +15,7 @@ const ZencodePlot = () => (
             alignItems: 'center',
             height: '100%',
             minHeight: '300px',
-            background: '#22282A',
+            background: '#22282A'
           }}
         >
           <Tree
@@ -27,6 +27,6 @@ const ZencodePlot = () => (
       )
     }
   </ParentSize>
-)
+);
 
-export default ZencodePlot
+export default ZencodePlot;

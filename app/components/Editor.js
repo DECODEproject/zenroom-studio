@@ -53,7 +53,7 @@ export default class Editor extends Component<Props> {
       errorLog: '',
       debugLog: '',
       isLive: false,
-      collapseNav: false,
+      collapseNav: false
     };
     this.toggleLiveCompile = this.toggleLiveCompile.bind(this);
     this.onCodeChange = this.onCodeChange.bind(this);
@@ -107,27 +107,41 @@ export default class Editor extends Component<Props> {
       {
         label: 'AST',
         content: (
-          <AceEditor {...jsonEditorProps} name='zenroom--ast--editor' value={this.state.outputAst} readOnly />
+          <AceEditor
+            {...jsonEditorProps}
+            name="zenroom--ast--editor"
+            value={this.state.outputAst}
+            readOnly
+          />
         )
       }
     ];
 
     this.state.outputTabs = [
-      { label: 'OUTPUT', content: <OutputContainer data={this.state.outputLog} />},
-      { label: `ERROR`, content: <OutputContainer data={this.state.errorLog} /> },
-      { label: `DEBUG`, content: <OutputContainer data={this.state.debugLog} /> },
+      {
+        label: 'OUTPUT',
+        content: <OutputContainer data={this.state.outputLog} />
+      },
+      {
+        label: `ERROR`,
+        content: <OutputContainer data={this.state.errorLog} />
+      },
+      {
+        label: `DEBUG`,
+        content: <OutputContainer data={this.state.debugLog} />
+      },
       { label: 'VISUAL CODE', content: <ZencodePlot /> }
     ];
-
   }
 
-  printOutput = (msg) => {
-    if (JSON.parse(msg) instanceof Object)
-      this.setState({outputAst: msg})
-    this.setState({outputLog: msg})
-  }
+  printOutput = msg => {
+    if (JSON.parse(msg) instanceof Object) this.setState({ outputAst: msg });
+    this.setState({ outputLog: msg });
+  };
 
-  printError = (msg) => { console.error(msg) }
+  printError = msg => {
+    console.error(msg);
+  };
 
   zenRun() {
     const zc = this.state.zencode === '' ? null : this.state.zencode;
@@ -145,10 +159,12 @@ export default class Editor extends Component<Props> {
 
   zenAst() {
     const zc = this.state.zencode === '' ? null : this.state.zencode;
-    this.props.zenroom.ccall('zenroom_parse_ast', 
-                             'number', 
-                             ['string', 'int', 'string', 'number', 'string', 'number'], 
-                             [zc, 0, this.state.outputLog, 0, '', 0])
+    this.props.zenroom.ccall(
+      'zenroom_parse_ast',
+      'number',
+      ['string', 'int', 'string', 'number', 'string', 'number'],
+      [zc, 0, this.state.outputLog, 0, '', 0]
+    );
   }
 
   onCodeChange(__) {
@@ -201,7 +217,7 @@ export default class Editor extends Component<Props> {
               />
               <Button
                 onClick={this.zenAst}
-                iconBefore={<AstIcon label='ast'>ast</AstIcon>}
+                iconBefore={<AstIcon label="ast">ast</AstIcon>}
               />
               <Toggle onChange={this.toggleLiveCompile} />
               <span>live compile</span>

@@ -1,9 +1,9 @@
 // @flow
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 
-function Node({ node, onClick}) {
-  const width = 40
-  const height = 20
+function Node({ node, onClick }) {
+  const width = 40;
+  const height = 20;
   return (
     <Fragment>
       {node.depth === 0 && (
@@ -15,7 +15,7 @@ function Node({ node, onClick}) {
           width={width}
           y={-height / 2}
           x={-width / 2}
-          fill={'#272b4d'}
+          fill="#272b4d"
           stroke={node.data.children ? '#03c0dc' : '#26deb0'}
           strokeWidth={1}
           strokeDasharray={!node.data.children ? '2,2' : '0'}
@@ -25,10 +25,10 @@ function Node({ node, onClick}) {
         />
       )}
       <text
-        dy={'.33em'}
+        dy=".33em"
         fontSize={9}
         fontFamily="Arial"
-        textAnchor={'middle'}
+        textAnchor="middle"
         style={{ pointerEvents: 'none' }}
         fill={
           node.depth === 0 ? '#71248e' : node.children ? 'white' : '#26deb0'
@@ -37,7 +37,7 @@ function Node({ node, onClick}) {
         {node.data.name}
       </text>
     </Fragment>
-  )
+  );
 }
 
-export default Node
+export default Node;

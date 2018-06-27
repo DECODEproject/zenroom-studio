@@ -1,9 +1,9 @@
-import React from 'react'
-import { Transition, animated, interpolate } from 'react-spring'
-import Node from './Node'
-import { findCollapsedParent, getTopLeft } from '../utils/utils'
+import React from 'react';
+import { Transition, animated, interpolate } from 'react-spring';
+import Node from './Node';
+import { findCollapsedParent, getTopLeft } from '../utils/utils';
 
-const keyAccessor = n => n.data.name
+const keyAccessor = n => n.data.name;
 
 function Nodes({ nodes, layout, orientation, onNodeClick }) {
   return (
@@ -17,45 +17,45 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
           node.parent || { x: 0, y: 0 },
           layout,
           orientation
-        )
+        );
         return {
           top: parentTopLeft.top,
           left: parentTopLeft.left,
-          opacity: 0,
-        }
+          opacity: 0
+        };
       }}
       enter={node => {
-        const topLeft = getTopLeft(node, layout, orientation)
+        const topLeft = getTopLeft(node, layout, orientation);
         return {
           top: topLeft.top,
           left: topLeft.left,
-          opacity: 1,
-        }
+          opacity: 1
+        };
       }}
       update={node => {
-        const topLeft = getTopLeft(node, layout, orientation)
+        const topLeft = getTopLeft(node, layout, orientation);
         return {
           top: topLeft.top,
           left: topLeft.left,
-          opacity: 1,
-        }
+          opacity: 1
+        };
       }}
       leave={node => {
-        const collapsedParent = findCollapsedParent(node.parent)
+        const collapsedParent = findCollapsedParent(node.parent);
         const collapsedParentPrevPos = {
           x: collapsedParent.data.x0,
-          y: collapsedParent.data.y0,
-        }
-        const topLeft = getTopLeft(collapsedParentPrevPos, layout, orientation)
+          y: collapsedParent.data.y0
+        };
+        const topLeft = getTopLeft(collapsedParentPrevPos, layout, orientation);
         return {
           top: topLeft.top,
           left: topLeft.left,
-          opacity: 0,
-        }
+          opacity: 0
+        };
       }}
     >
       {nodes.map(node => styles => {
-        const key = keyAccessor(node)
+        const key = keyAccessor(node);
         return (
           <animated.g
             className="cx-group"
@@ -63,7 +63,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
               cursor: 'pointer',
               pointerEvents: styles.opacity.interpolate(
                 v => (v < 0.5 ? 'none' : 'all')
-              ),
+              )
             }}
             width={40}
             height={20}
@@ -82,10 +82,10 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
               key={key}
             />
           </animated.g>
-        )
+        );
       })}
     </Transition>
-  )
+  );
 }
 
-export default Nodes
+export default Nodes;

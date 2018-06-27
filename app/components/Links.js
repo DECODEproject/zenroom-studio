@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import Link from './Link'
+import React, { Fragment } from 'react';
+import Link from './Link';
 
 function Links({ links, linkType, layout, orientation, stepPercent }) {
   return (
@@ -18,7 +18,7 @@ function Links({ links, linkType, layout, orientation, stepPercent }) {
         />
       ))}
     </Fragment>
-  )
+  );
 }
 
-export default Links
+export default Links;
