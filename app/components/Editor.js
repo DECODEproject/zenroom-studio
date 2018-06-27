@@ -1,14 +1,12 @@
 // @flow
-
+import AceEditor from 'react-ace';
 import 'brace/mode/lua';
 import 'brace/mode/json';
 import 'brace/ext/language_tools';
 import 'brace/theme/monokai';
 import 'brace/theme/dracula';
-import AceEditor from 'react-ace';
 
 import React, { Component } from 'react';
-
 import Button from '@atlaskit/button';
 import Toggle from '@atlaskit/toggle';
 import Tooltip from '@atlaskit/tooltip';
@@ -17,6 +15,7 @@ import PlayIcon from '@atlaskit/icon/glyph/vid-play';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
 import Navigation, { Skeleton } from '@atlaskit/navigation';
+import ZencodePlot from './ZencodePlot';
 
 export const jsonEditorProps = {
   mode: 'json',
@@ -47,6 +46,9 @@ export default class Editor extends Component<Props> {
       zendata: '',
       zenkeys: '',
       zenconfig: '',
+      outputLog: '',
+      errorLog: '',
+      debugLog: '',
       isLive: false,
       collapseNav: false
     };
@@ -57,6 +59,8 @@ export default class Editor extends Component<Props> {
     this.onConfigChange = this.onConfigChange.bind(this);
     this.toggleNavigation = this.toggleNavigation.bind(this);
     this.zenRun = this.zenRun.bind(this);
+    this.printOutput = this.printOutput.bind(this);
+    this.props.zenroom.print = this.printOutput;
 
     this.state.tabs = [
       {
@@ -97,13 +101,21 @@ export default class Editor extends Component<Props> {
     ];
 
     this.state.outputTabs = [
-      { label: 'OUTPUT', content: <div /> },
-      { label: `ERROR`, content: <div /> },
-      { label: `DEBUG`, content: <div /> },
-      { label: 'TERMINAL', content: <div /> }
+      { label: 'OUTPUT', content: this.state.outputLog },
+      { label: `ERROR`, content: this.state.errorLog },
+      { label: `DEBUG`, content: this.state.debugLog },
+      { label: 'TERMINAL', content: <div /> },
+      { label: 'REPR', content: <ZencodePlot /> }
     ];
+
   }
 
+  printOutput = (text) => {
+      console.log(text)
+      if (arguments.length > 1) 
+        text = Array.prototype.slice.call(arguments).join(' ');
+      this.setState({outputLog: this.state.outputLog += `${text}<br/>`})
+  }
   zenRun() {
     const zc = this.state.zencode === '' ? null : this.state.zencode;
     const zd = this.state.zendata === '' ? null : this.state.zendata;
