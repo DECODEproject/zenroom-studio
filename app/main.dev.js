@@ -76,6 +76,7 @@ app.on('ready', async () => {
     }
     mainWindow.show();
     mainWindow.focus();
+    mainWindow.maximize();
   });
 
   mainWindow.on('closed', () => {
