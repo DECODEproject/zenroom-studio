@@ -14,7 +14,9 @@ import Tabs, { TabItem } from '@atlaskit/tabs';
 import PlayIcon from '@atlaskit/icon/glyph/vid-play';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
+import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
 import Navigation, { Skeleton } from '@atlaskit/navigation';
+import OutputContainer from './OutputContainer';
 import ZencodePlot from './ZencodePlot';
 
 export const jsonEditorProps = {
@@ -47,10 +49,11 @@ export default class Editor extends Component<Props> {
       zenkeys: '',
       zenconfig: '',
       outputLog: '',
+      outputAst: '',
       errorLog: '',
       debugLog: '',
       isLive: false,
-      collapseNav: false
+      collapseNav: false,
     };
     this.toggleLiveCompile = this.toggleLiveCompile.bind(this);
     this.onCodeChange = this.onCodeChange.bind(this);
@@ -59,8 +62,11 @@ export default class Editor extends Component<Props> {
     this.onConfigChange = this.onConfigChange.bind(this);
     this.toggleNavigation = this.toggleNavigation.bind(this);
     this.zenRun = this.zenRun.bind(this);
+    this.zenAst = this.zenAst.bind(this);
     this.printOutput = this.printOutput.bind(this);
+    this.printError = this.printError.bind(this);
     this.props.zenroom.print = this.printOutput;
+    this.props.zenroom.printErr = this.printError;
 
     this.state.tabs = [
       {
@@ -97,25 +103,32 @@ export default class Editor extends Component<Props> {
           />
         ),
         tooltip: 'Your zenroom env config'
+      },
+      {
+        label: 'AST',
+        content: (
+          <AceEditor {...jsonEditorProps} name='zenroom--ast--editor' value={this.state.outputAst} readOnly />
+        )
       }
     ];
 
     this.state.outputTabs = [
-      { label: 'OUTPUT', content: this.state.outputLog },
-      { label: `ERROR`, content: this.state.errorLog },
-      { label: `DEBUG`, content: this.state.debugLog },
-      { label: 'TERMINAL', content: <div /> },
-      { label: 'REPR', content: <ZencodePlot /> }
+      { label: 'OUTPUT', content: <OutputContainer data={this.state.outputLog} />},
+      { label: `ERROR`, content: <OutputContainer data={this.state.errorLog} /> },
+      { label: `DEBUG`, content: <OutputContainer data={this.state.debugLog} /> },
+      { label: 'VISUAL CODE', content: <ZencodePlot /> }
     ];
 
   }
 
-  printOutput = (text) => {
-      console.log(text)
-      if (arguments.length > 1) 
-        text = Array.prototype.slice.call(arguments).join(' ');
-      this.setState({outputLog: this.state.outputLog += `${text}<br/>`})
+  printOutput = (msg) => {
+    if (JSON.parse(msg) instanceof Object)
+      this.setState({outputAst: msg})
+    this.setState({outputLog: msg})
   }
+
+  printError = (msg) => { console.error(msg) }
+
   zenRun() {
     const zc = this.state.zencode === '' ? null : this.state.zencode;
     const zd = this.state.zendata === '' ? null : this.state.zendata;
@@ -130,15 +143,25 @@ export default class Editor extends Component<Props> {
     );
   }
 
+  zenAst() {
+    const zc = this.state.zencode === '' ? null : this.state.zencode;
+    this.props.zenroom.ccall('zenroom_parse_ast', 
+                             'number', 
+                             ['string', 'int', 'string', 'number', 'string', 'number'], 
+                             [zc, 0, this.state.outputLog, 0, '', 0])
+  }
+
   onCodeChange(__) {
     this.setState({ zencode: __ });
-    if (this.state.isLive) this.zenRun();
+    if (this.state.isLive) {
+      this.zenRun();
+      this.zenAst();
+    }
   }
   onDataChange(__) {
     this.setState({ zendata: __ });
   }
   onKeysChange(__) {
-    console.log(__, this.state.zenkeys);
     this.setState({ zenkeys: __ });
   }
   onConfigChange(__) {
@@ -176,6 +199,10 @@ export default class Editor extends Component<Props> {
                 iconBefore={<PlayIcon label="run">run</PlayIcon>}
                 isDisabled={this.state.isLive}
               />
+              <Button
+                onClick={this.zenAst}
+                iconBefore={<AstIcon label='ast'>ast</AstIcon>}
+              />
               <Toggle onChange={this.toggleLiveCompile} />
               <span>live compile</span>
             </div>
@@ -199,6 +226,7 @@ export default class Editor extends Component<Props> {
           <GridColumn medium={5} spacing="compact">
             <Tabs components={{ Item: TooltipItem }} tabs={this.state.tabs} />
             <Tabs tabs={this.state.outputTabs} />
+            <div>{this.state.outputAst}</div>
           </GridColumn>
         </Grid>
       </Page>
