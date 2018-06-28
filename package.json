@@ -32,7 +32,11 @@
     "test-e2e": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings -r babel-register ./internals/scripts/RunTests.js e2e",
     "test-watch": "npm test -- --watch"
   },
-  "browserslist": "electron 1.6",
+  "author": {
+    "name": "puria",
+    "email": "puria@dyne.org"
+  },
+  "browserslist": "electron 2.0",
   "lint-staged": {
     "*.js": [
       "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
@@ -71,6 +75,7 @@
       ]
     },
     "linux": {
+      "maintainer": "puria <puria@dyne.org>",
       "target": [
         "deb",
         "AppImage"
@@ -86,12 +91,6 @@
     "type": "git",
     "url": "git+https://github.com/zenroom/"
   },
-  "author": {
-    "name": "puria",
-    "email": "dev@dyne.org",
-    "url": "https://github.com/zenroom"
-  },
-  "license": "MIT",
   "keywords": [
     "electron",
     "boilerplate",
@@ -224,6 +223,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-spring": "^5.3.18",
+    "react-tabs": "^2.2.2",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "source-map-support": "^0.5.6",
