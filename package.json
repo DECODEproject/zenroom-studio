@@ -1,7 +1,7 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.13.3",
+  "name": "zenroom-studio",
+  "productName": "ZenroomStudio",
+  "version": "0.0.1",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -20,6 +20,7 @@
     "package-all": "yarn build && build -mwl",
     "package-linux": "yarn build && build --linux",
     "package-win": "yarn build && build --win --x64",
+    "package-mac": "yarn build && build -m",
     "postinstall": "node -r babel-register internals/scripts/CheckNativeDep.js && yarn flow-typed && yarn build-dll && electron-builder install-app-deps && node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
     "postlint-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.js'",
     "precommit": "lint-staged",
@@ -53,7 +54,10 @@
       "app.html",
       "main.prod.js",
       "main.prod.js.map",
-      "package.json"
+      "package.json",
+      "index.data",
+      "index.wasm",
+      "zenroom-loader.js"
     ],
     "dmg": {
       "contents": [

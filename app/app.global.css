@@ -50,8 +50,8 @@ a:hover {
 }
 
 .react-tabs__tab-list {
-  border-bottom: 1px solid #aaa;
-  margin: 0 0 10px;
+  border-bottom: 3px solid white;
+  margin-top: 3px;
   padding: 0;
 }
 
@@ -59,7 +59,7 @@ a:hover {
   display: inline-block;
   border: 1px solid transparent;
   border-bottom: none;
-  bottom: -1px;
+  bottom: -3px;
   position: relative;
   list-style: none;
   padding: 6px 12px;
@@ -68,10 +68,9 @@ a:hover {
 }
 
 .react-tabs__tab--selected {
-  background: #fff;
-  border-color: #aaa;
   color: black;
-  border-radius: 5px 5px 0 0;
+  border-bottom: 3px solid pink;
+  background-color: rgba(255, 192, 203, 0.3)
 }
 
 .react-tabs__tab--disabled {
