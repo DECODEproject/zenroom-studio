@@ -1,25 +1,26 @@
 // @flow
+import React, { Component } from 'react';
+
 import AceEditor from 'react-ace';
 import 'brace/mode/lua';
 import 'brace/mode/json';
-import 'brace/ext/language_tools';
 import 'brace/theme/monokai';
 import 'brace/theme/dracula';
+import 'brace/ext/language_tools';
 
-import React, { Component } from 'react';
 import Badge from '@atlaskit/badge';
 import Button from '@atlaskit/button';
 import Toggle from '@atlaskit/toggle';
-import Tooltip from '@atlaskit/tooltip';
 import TrashIcon from '@atlaskit/icon/glyph/trash';
 import PlayIcon from '@atlaskit/icon/glyph/vid-play';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
-import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
 import Navigation, { Skeleton } from '@atlaskit/navigation';
+import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
+
 import OutputContainer from './OutputContainer';
 import ZencodePlot from './ZencodePlot';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export const jsonEditorProps = {
   mode: 'json',
@@ -43,12 +44,6 @@ export const outputEditorProps = {
   wrapEnabled: true,
   readOnly: true,
 }
-
-const TooltipItem = (props: TabItemComponentProvided) => (
-  <Tooltip content={props.data.tooltip}>
-    <TabItem {...props} />
-  </Tooltip>
-);
 
 export default class Editor extends Component<Props> {
   props: Props;
@@ -83,22 +78,20 @@ export default class Editor extends Component<Props> {
     this.props.zenroom.printErr = this.printError;
   }
 
-   parseAstToData = (ast, result) => {
-    let childCount = Object.keys(ast).length - 2;
+  parseAstToData = (ast, result) => {
+    const childCount = Object.keys(ast).length - 2;
     if (typeof ast !== 'object')
       return
-      let name = (ast.tag === 'Id' || ast.tag === 'String') ? ast[1] : ast.tag
-      let element = {name: name, children: []}
-    for (let i=1; i <= childCount; i++) {
+    const name = (ast.tag === 'Id' || ast.tag === 'String') ? ast['1'] : `${ast.tag} ${ast['1']}`
+    const element = {name, children: []}
+    for (let i=1; i <= childCount; i+=1) {
       this.parseAstToData(ast[i], element)
     }
-    if (element.children.length == 0)
+    if (element.children.length === 0)
       delete element.children
     
     result.children.push(element)
   }
-
-
 
   printOutput = msg => {
     let json = ''
@@ -106,7 +99,7 @@ export default class Editor extends Component<Props> {
       json = JSON.parse(msg)
     } catch(e) {}
     if (json instanceof Object) { 
-      let dataResult = {name: 'start', children: [] }
+      const dataResult = {name: 'start', children: [] }
       this.parseAstToData(JSON.parse(msg), dataResult)
       this.setState({ outputAst: dataResult });
     }
@@ -148,7 +141,7 @@ export default class Editor extends Component<Props> {
       'zenroom_parse_ast',
       'number',
       ['string', 'int', 'string', 'number', 'string', 'number'],
-      [zc, 0, this.state.outputLog, 0, '', 0]
+      [zc, 0, this.state.outputAst, 0, '', 0]
     );
   }
 
@@ -260,7 +253,7 @@ export default class Editor extends Component<Props> {
 
               <TabPanel>
                 <OutputContainer>
-                  <Button iconBefore={<TrashIcon/>} />
+                  <Button iconBefore={<TrashIcon />} />
                   <AceEditor {...outputEditorProps} name="zenroom--output--editor" value={this.state.outputLog} readOnly />
                 </OutputContainer>
                 {/* <OutputContainer>{this.state.outputLog}</OutputContainer> */}
@@ -272,7 +265,7 @@ export default class Editor extends Component<Props> {
                 <OutputContainer>{this.state.debugLog}</OutputContainer>
               </TabPanel>
               <TabPanel>
-                <AceEditor {...jsonEditorProps} name="zenroom--ast--editor" value={this.state.outputAst} readOnly />
+                <AceEditor {...jsonEditorProps} name="zenroom--ast--editor" value={JSON.stringify(this.state.outputAst)} readOnly />
               </TabPanel>
               <TabPanel>
                 <OutputContainer>
