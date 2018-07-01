@@ -13,6 +13,7 @@ const Terminal = styled.pre`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  margin: 0;
 `
 
 const OutputContainer = (props) => (

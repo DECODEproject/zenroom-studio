@@ -45,14 +45,13 @@ a:hover {
 
 #zenroom--editor {
   margin-left: -8px;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
 }
 
 .react-tabs__tab-list {
   border-bottom: 3px solid white;
   margin-top: 3px;
   padding: 0;
+  margin-bottom: 0px;
 }
 
 .react-tabs__tab {
