@@ -6,18 +6,23 @@ import { Group } from '@vx/group';
 import Node from './Node';
 import { getTopLeft } from '../utils/utils';
 
-function Nodes({ nodes, layout, orientation, onNodeClick }) {
-  Props;
+type Props = {
+  nodes: Array<Node>,
+  layout: string,
+  orientation: string
+};
+
+function Nodes(props: Props) {
 
   return (
     <Fragment>
-      {nodes.map((node, i) => (
-        <Group {...getTopLeft(node, layout, orientation)} key={node}>
+      {props.nodes.map((node) => (
+        <Group {...getTopLeft(node, props.layout, props.orientation)} key={node}>
           <Node
             node={node}
-            layout={layout}
-            orientation={orientation}
-            onClick={() => onNodeClick(node)}
+            layout={props.layout}
+            orientation={props.orientation}
+            onClick={() => props.onNodeClick(node)}
           />
         </Group>
       ))}

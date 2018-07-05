@@ -175,7 +175,7 @@
     "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.0.0",
+    "jest": "^23.2.0",
     "lint-staged": "^7.1.2",
     "minimist": "^1.2.0",
     "node-sass": "^4.9.0",

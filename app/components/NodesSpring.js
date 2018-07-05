@@ -5,18 +5,25 @@ import { findCollapsedParent, getTopLeft } from '../utils/utils';
 
 const keyAccessor = n => n.data.name;
 
-function Nodes({ nodes, layout, orientation, onNodeClick }) {
+type Props = {
+  nodes: React.Node,
+  layout: string,
+  orientation: string,
+  onNodeClick: () => mixed
+};
+
+function Nodes(props: Props) {
   return (
     <Transition
       native
-      items={nodes}
+      items={props.nodes}
       keys={keyAccessor}
       config={{ tension: 1000, friction: 130, mass: 5 }}
       from={node => {
         const parentTopLeft = getTopLeft(
           node.parent || { x: 0, y: 0 },
-          layout,
-          orientation
+          props.layout,
+          props.orientation
         );
         return {
           top: parentTopLeft.top,
@@ -25,7 +32,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
         };
       }}
       enter={node => {
-        const topLeft = getTopLeft(node, layout, orientation);
+        const topLeft = getTopLeft(node, props.layout, props.orientation);
         return {
           top: topLeft.top,
           left: topLeft.left,
@@ -33,7 +40,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
         };
       }}
       update={node => {
-        const topLeft = getTopLeft(node, layout, orientation);
+        const topLeft = getTopLeft(node, props.layout, props.orientation);
         return {
           top: topLeft.top,
           left: topLeft.left,
@@ -46,7 +53,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
           x: collapsedParent.data.x0,
           y: collapsedParent.data.y0
         };
-        const topLeft = getTopLeft(collapsedParentPrevPos, layout, orientation);
+        const topLeft = getTopLeft(collapsedParentPrevPos, props.layout, props.orientation);
         return {
           top: topLeft.top,
           left: topLeft.left,
@@ -54,7 +61,7 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
         };
       }}
     >
-      {nodes.map(node => styles => {
+      {props.nodes.map(node => styles => {
         const key = keyAccessor(node);
         return (
           <animated.g
@@ -76,9 +83,9 @@ function Nodes({ nodes, layout, orientation, onNodeClick }) {
           >
             <Node
               node={node}
-              layout={layout}
-              orientation={orientation}
-              onClick={() => onNodeClick(node)}
+              layout={props.layout}
+              orientation={props.orientation}
+              onClick={() => props.onNodeClick(node)}
               key={key}
             />
           </animated.g>

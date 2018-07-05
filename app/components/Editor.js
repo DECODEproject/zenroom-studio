@@ -19,12 +19,12 @@ import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
 import Navigation, { Skeleton } from '@atlaskit/navigation';
 import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
 
-import OutputContainer from './OutputContainer';
+import OutputContainer from '../containers/OutputContainer';
 import ZencodePlot from './ZencodePlot';
 
 export const jsonEditorProps = {
   mode: 'json',
-  height: '400px',
+  height: '200px',
   width: '100vw',
   fontSize: 15,
   theme: 'dracula',
@@ -36,14 +36,14 @@ export const jsonEditorProps = {
 
 export const outputEditorProps = {
   theme: 'dracula',
-  height: '400px',
+  height: '600px',
   width: '100vw',
   highlightActiveLine: false,
   showGutter: false,
   showPrintMargin: false,
   wrapEnabled: true,
-  readOnly: true,
-}
+  readOnly: true
+};
 
 export default class Editor extends Component<Props> {
   props: Props;
@@ -77,61 +77,66 @@ export default class Editor extends Component<Props> {
     this.props.zenroom.print = this.printOutput;
     this.props.zenroom.printErr = this.printError;
 
-    this.errorCounter = 0
-    this.outputLog = ''
-    this.errorLog = ''
-    this.debugLog = ''
+    this.errorCounter = 0;
+    this.outputLog = '';
+    this.errorLog = '';
+    this.debugLog = '';
   }
+
 
   parseAstToData = (ast, result) => {
-    if (typeof ast !== 'object')
-      return
-
     const childCount = Object.keys(ast).length - 2;
-    const name = (ast.tag === 'Id' || ast.tag === 'String') ? ast['1'] : `${ast.tag} ${Math.random().toString(36).substr(2, 4)}`
-    const element = {name, children: []}
-    for (let i=1; i <= childCount; i+=1) {
-      this.parseAstToData(ast[i], element)
+
+    if (typeof ast !== 'object') return;
+
+    const name = (ast.tag === 'Id' || ast.tag === 'String') ? ast['1'] : `${ast.tag} ${Math.random().toString(36).substr(2, 4)}`;
+    const element = { name, children: [] };
+    for (let i = 1; i <= childCount; i += 1) {
+      this.parseAstToData(ast[i], element);
     }
-    if (element.children.length === 0)
-      delete element.children
-    
-    result.children.push(element)
-  }
+    if (element.children.length === 0) delete element.children;
+
+    result.children.push(element);
+  };
 
   printOutput = msg => {
-    let json = ''
+    let json = '';
 
     try {
-      json = JSON.parse(msg)
-    } catch(e) {}
+      json = JSON.parse(msg);
+    } catch (e) {
+      ;
+    }
 
-    if (json instanceof Object) { 
-      const dataResult = {name: 'start', children: [] }
-      this.parseAstToData(JSON.parse(msg), dataResult)
+    if (json instanceof Object) {
+      const dataResult = { name: 'start', children: [] };
+      this.parseAstToData(JSON.parse(msg), dataResult);
       this.setState({ outputAst: dataResult });
     }
-    
-    this.outputLog = this.outputLog.concat(`${msg}\n`)
+
+    this.outputLog = this.outputLog.concat(`${msg}\n`);
   };
 
   printError = msg => {
-    if (!typeof msg === "string")
-      return
+    if (typeof msg !== 'string') return;
 
     if (msg.toString().startsWith('[!]')) {
-      this.errorLog = this.errorLog.concat(`${new Date().toISOString()}:  ${msg}\n`)
+      this.errorLog = this.errorLog.concat(
+        `${new Date().toISOString()}:  ${msg}\n`
+      );
       this.errorCounter += 1;
     }
 
-    this.debugLog = this.debugLog.concat(`${new Date().toISOString()}:  ${msg}\n`) 
+    this.debugLog = this.debugLog.concat(
+      `${new Date().toISOString()}:  ${msg}\n`
+    );
   };
 
   zenRun() {
-    this.errorLog = ''
-    this.debugLog = ''
-    this.outputLog = ''
-    this.errorCounter = 0
+    this.errorLog = '';
+    this.debugLog = '';
+    this.outputLog = '';
+    this.errorCounter = 0;
     const zc = this.state.zencode === '' ? null : this.state.zencode;
     const zd = this.state.zendata === '' ? null : this.state.zendata;
     const zk = this.state.zenkeys === '' ? null : this.state.zenkeys;
@@ -148,8 +153,8 @@ export default class Editor extends Component<Props> {
       errorLog: this.errorLog,
       debugLog: this.debugLog,
       outputLog: this.outputLog,
-      errorCounter: this.errorCounter,
-    })
+      errorCounter: this.errorCounter
+    });
   }
 
   zenAst() {
@@ -160,15 +165,6 @@ export default class Editor extends Component<Props> {
       ['string', 'int', 'string', 'number', 'string', 'number'],
       [zc, 0, this.state.outputAst, 0, '', 0]
     );
-    // let json = ''
-    // try {
-    //   json = JSON.parse(msg)
-    // } catch(e) {}
-    // if (json instanceof Object) { 
-    //   const dataResult = {name: 'start', children: [] }
-    //   this.parseAstToData(JSON.parse(msg), dataResult)
-    //   this.setState({ outputAst: dataResult });
-    // }
   }
 
   onCodeChange(__) {
@@ -177,19 +173,19 @@ export default class Editor extends Component<Props> {
       this.zenRun();
     }
   }
-  
+
   onDataChange(__) {
     this.setState({ zendata: __ });
   }
-  
+
   onKeysChange(__) {
     this.setState({ zenkeys: __ });
   }
-  
+
   onConfigChange(__) {
     this.setState({ zenconfig: __ });
   }
-  
+
   toggleNavigation() {
     this.setState({ collapseNav: !this.state.collapseNav });
   }
@@ -219,6 +215,7 @@ export default class Editor extends Component<Props> {
                 iconBefore={<DashboardIcon>expand</DashboardIcon>}
               />
               <Button
+                id="run"
                 onClick={this.zenRun}
                 iconBefore={<PlayIcon label="run">run</PlayIcon>}
                 isDisabled={this.state.isLive}
@@ -258,17 +255,32 @@ export default class Editor extends Component<Props> {
 
               <TabPanel>
                 <OutputContainer>
-                  <AceEditor {...jsonEditorProps} name="zenroom--data--editor" onChange={this.onDataChange} value={this.state.zendata} />
+                  <AceEditor
+                    {...jsonEditorProps}
+                    name="zenroom--data--editor"
+                    onChange={this.onDataChange}
+                    value={this.state.zendata}
+                  />
                 </OutputContainer>
               </TabPanel>
               <TabPanel>
                 <OutputContainer>
-                  <AceEditor {...jsonEditorProps} name="zenroom--keys--editor" onChange={this.onKeysChange} value={this.state.zenkeys} />
+                  <AceEditor
+                    {...jsonEditorProps}
+                    name="zenroom--keys--editor"
+                    onChange={this.onKeysChange}
+                    value={this.state.zenkeys}
+                  />
                 </OutputContainer>
               </TabPanel>
               <TabPanel>
                 <OutputContainer>
-                  <AceEditor {...jsonEditorProps} name="zenroom--config--editor" onChange={this.onKeysChange} value={this.state.zenconfig} />
+                  <AceEditor
+                    {...jsonEditorProps}
+                    name="zenroom--config--editor"
+                    onChange={this.onKeysChange}
+                    value={this.state.zenconfig}
+                  />
                 </OutputContainer>
               </TabPanel>
             </Tabs>
@@ -276,11 +288,14 @@ export default class Editor extends Component<Props> {
             <Tabs>
               <TabList>
                 <Tab>OUTPUT</Tab>
-                <Tab>ERROR 
-                  <Badge 
-                    value={this.state.errorCounter} 
-                    max={99} 
-                    appearance={this.state.errorCounter ? 'important' : 'primaryInverted'} 
+                <Tab>
+                  ERROR
+                  <Badge
+                    value={this.state.errorCounter}
+                    max={99}
+                    appearance={
+                      this.state.errorCounter ? 'important' : 'primaryInverted'
+                    }
                   />
                 </Tab>
                 <Tab>DEBUG</Tab>
@@ -291,7 +306,12 @@ export default class Editor extends Component<Props> {
               <TabPanel>
                 <OutputContainer>
                   <Button iconBefore={<TrashIcon />} />
-                  <AceEditor {...outputEditorProps} name="zenroom--output--editor" value={this.state.outputLog} readOnly />
+                  <AceEditor
+                    {...outputEditorProps}
+                    name="zenroom--output--editor"
+                    value={this.state.outputLog}
+                    readOnly
+                  />
                 </OutputContainer>
               </TabPanel>
               <TabPanel>
@@ -301,7 +321,12 @@ export default class Editor extends Component<Props> {
                 <OutputContainer>{this.state.debugLog}</OutputContainer>
               </TabPanel>
               <TabPanel>
-                <AceEditor {...jsonEditorProps} name="zenroom--ast--editor" value={JSON.stringify(this.state.outputAst)} readOnly />
+                <AceEditor
+                  {...jsonEditorProps}
+                  name="zenroom--ast--editor"
+                  value={JSON.stringify(this.state.outputAst)}
+                  readOnly
+                />
               </TabPanel>
               <TabPanel>
                 <OutputContainer>

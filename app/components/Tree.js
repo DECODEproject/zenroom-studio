@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Group } from '@vx/group';
 import { Tree } from '@vx/hierarchy';
@@ -22,10 +23,10 @@ export default class extends React.Component {
       width,
       height,
       margin = {
-        top: 30,
+        top: 10,
         left: 30,
         right: 30,
-        bottom: 30
+        bottom: 10
       }
     } = this.props;
     const { layout, orientation, linkType, stepPercent } = this.state;
@@ -48,7 +49,7 @@ export default class extends React.Component {
             left={margin.left}
             root={root}
             size={[sizeWidth, sizeHeight]}
-            separation={(a, b) => (a.parent === b.parent ? 1 : 0.5) / a.depth}
+            separation={(a, b) => (a.parent === b.parent ? 2 : 0.9) / a.depth}
           >
             {({ data }) => (
               <Group top={origin.y} left={origin.x}>
@@ -64,12 +65,14 @@ export default class extends React.Component {
                   layout={layout}
                   orientation={orientation}
                   onNodeClick={node => {
+                    /* eslint-disable no-param-reassign */
                     if (!node.data.isExpanded) {
                       node.data.x0 = node.x;
                       node.data.y0 = node.y;
                     }
                     node.data.isExpanded = !node.data.isExpanded;
                     this.forceUpdate();
+                    /* eslint-enable no-param-reassign */
                   }}
                 />
               </Group>

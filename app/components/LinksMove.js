@@ -5,13 +5,21 @@ import { Transition } from 'react-spring';
 import Link from './Link';
 import { findCollapsedParent } from '../utils/utils';
 
-function Links({ links, linkType, layout, orientation, stepPercent }) {
+type Props = {
+  links: Array<Link>,
+  linkType: string,
+  layout: string,
+  orientation: string,
+  stepPercent: number
+};
+
+function Links(props: Props) {
   return (
     <Group>
       <Transition
-        items={links}
+        items={props.links}
         keys={d => `${d.source.data.name}_${d.target.data.name}`}
-        from={({ source, target }) => ({
+        from={({ source }) => ({
           sx: source.data.x0,
           sy: source.data.y0,
           tx: source.data.x0,
@@ -29,7 +37,7 @@ function Links({ links, linkType, layout, orientation, stepPercent }) {
           tx: target.x,
           ty: target.y
         })}
-        leave={({ source, target }) => {
+        leave={({ source }) => {
           const collapsedParent = findCollapsedParent(source);
           return {
             sx: collapsedParent.data.x0,
@@ -39,16 +47,16 @@ function Links({ links, linkType, layout, orientation, stepPercent }) {
           };
         }}
       >
-        {links.map(link => styles => (
+        {props.links.map(link => styles => (
           <Link
             data={{
               source: { x: styles.sx, y: styles.sy },
               target: { x: styles.tx, y: styles.ty }
             }}
-            linkType={linkType}
-            layout={layout}
-            orientation={orientation}
-            stepPercent={stepPercent}
+            linkType={props.linkType}
+            layout={props.layout}
+            orientation={props.orientation}
+            stepPercent={props.stepPercent}
             stroke="#374469"
             strokeWidth="1"
             fill="none"
