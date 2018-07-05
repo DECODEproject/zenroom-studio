@@ -1,7 +1,7 @@
 {
-  "name": "electron-react-boilerplate",
-  "productName": "ElectronReact",
-  "version": "0.13.3",
+  "name": "zenroom-studio",
+  "productName": "ZenroomStudio",
+  "version": "0.0.1",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Hot Loader for rapid application development",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
@@ -20,6 +20,7 @@
     "package-all": "yarn build && build -mwl",
     "package-linux": "yarn build && build --linux",
     "package-win": "yarn build && build --win --x64",
+    "package-mac": "yarn build && build -m",
     "postinstall": "node -r babel-register internals/scripts/CheckNativeDep.js && yarn flow-typed && yarn build-dll && electron-builder install-app-deps && node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
     "postlint-fix": "prettier --ignore-path .eslintignore --single-quote --write '**/*.js'",
     "precommit": "lint-staged",
@@ -32,7 +33,11 @@
     "test-e2e": "cross-env NODE_ENV=test BABEL_DISABLE_CACHE=1 node --trace-warnings -r babel-register ./internals/scripts/RunTests.js e2e",
     "test-watch": "npm test -- --watch"
   },
-  "browserslist": "electron 1.6",
+  "author": {
+    "name": "puria",
+    "email": "puria@dyne.org"
+  },
+  "browserslist": "electron 2.0",
   "lint-staged": {
     "*.js": [
       "cross-env NODE_ENV=development eslint --cache --format=node_modules/eslint-formatter-pretty",
@@ -49,7 +54,10 @@
       "app.html",
       "main.prod.js",
       "main.prod.js.map",
-      "package.json"
+      "package.json",
+      "index.data",
+      "index.wasm",
+      "zenroom-loader.js"
     ],
     "dmg": {
       "contents": [
@@ -71,6 +79,7 @@
       ]
     },
     "linux": {
+      "maintainer": "puria <puria@dyne.org>",
       "target": [
         "deb",
         "AppImage"
@@ -86,12 +95,6 @@
     "type": "git",
     "url": "git+https://github.com/zenroom/"
   },
-  "author": {
-    "name": "puria",
-    "email": "dev@dyne.org",
-    "url": "https://github.com/zenroom"
-  },
-  "license": "MIT",
   "keywords": [
     "electron",
     "boilerplate",
@@ -172,7 +175,7 @@
     "flow-typed": "^2.4.0",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.0.0",
+    "jest": "^23.2.0",
     "lint-staged": "^7.1.2",
     "minimist": "^1.2.0",
     "node-sass": "^4.9.0",
@@ -224,6 +227,7 @@
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.6",
     "react-spring": "^5.3.18",
+    "react-tabs": "^2.2.2",
     "redux": "^4.0.0",
     "redux-thunk": "^2.2.0",
     "source-map-support": "^0.5.6",

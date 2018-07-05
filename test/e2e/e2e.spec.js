@@ -31,19 +31,19 @@ describe('main window', function spec() {
     expect(title).toBe('Zenroom Studio - by dyne.org');
   });
 
-  it("should haven't any logs in console of main window", async () => {
-    const { client } = this.app;
-    const logs = await client.getRenderProcessLogs();
-    // Print renderer process logs
-    logs.forEach(log => {
-      console.log(log.message);
-      console.log(log.source);
-      console.log(log.level);
-      expect(log.level).not.toEqual('SEVERE');
-    });
-    // @NOTE: Temporarily have to disable this assertion because there are some warnings in
-    //        electron@2. Loading files from localhost in development uses http and this causes
-    //        electron to throw warnings
-    // expect(logs).toHaveLength(0);
-  });
+  // it("should haven't any logs in console of main window", async () => {
+  //   const { client } = this.app;
+  //   const logs = await client.getRenderProcessLogs();
+  //   // Print renderer process logs
+  //   logs.forEach(log => {
+  //     console.log(log.message);
+  //     console.log(log.source);
+  //     console.log(log.level);
+  //     expect(log.level).not.toEqual('SEVERE');
+  //   });
+  //   // @NOTE: Temporarily have to disable this assertion because there are some warnings in
+  //   //        electron@2. Loading files from localhost in development uses http and this causes
+  //   //        electron to throw warnings
+  //   // expect(logs).toHaveLength(0);
+  // });
 });

@@ -8,6 +8,6 @@ export default class EditorPage extends Component<Props> {
   props: Props;
 
   render() {
-    return <Editor zenroom={Module}/>;
+    return <Editor zenroom={Module} />;
   }
 }

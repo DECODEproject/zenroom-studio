@@ -1,17 +1,22 @@
-import React from 'react'
-import { LinkHorizontal } from '@vx/shape'
+import React from 'react';
+import { LinkHorizontal } from '@vx/shape';
 
-function Link({ data, linkType, layout, orientation, stepPercent, ...props }) {
+type Props = {
+  data: array,
+  stepPercent: number
+};
+
+function Link(props: Props, ...innerProps) {
   return (
     <LinkHorizontal
-      data={data}
-      percent={stepPercent}
+      data={props.data}
+      percent={props.stepPercent}
       stroke="#374469"
       strokeWidth="1"
       fill="none"
-      {...props}
+      {...innerProps}
     />
-  )
+  );
 }
 
-export default Link
+export default Link;

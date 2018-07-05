@@ -130,6 +130,16 @@ export default merge.smart(baseConfig, {
           }
         }
       },
+      // WASM
+      {
+        test: /\.wasm$/,
+        use: {
+          loader: 'wasm-loader',
+          options: {
+            mimetype: 'application/wasm'
+          }
+        }
+      },
       // EOT Font
       {
         test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
@@ -148,7 +158,7 @@ export default merge.smart(baseConfig, {
       },
       // Common Image Formats
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp|data)$/,
         use: 'url-loader'
       }
     ]

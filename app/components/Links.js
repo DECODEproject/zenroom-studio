@@ -1,16 +1,24 @@
-import React, { Fragment } from 'react'
-import Link from './Link'
+import React, { Fragment } from 'react';
+import Link from './Link';
 
-function Links({ links, linkType, layout, orientation, stepPercent }) {
+type Props = {
+  links: Array<Link>,
+  linkType: string,
+  layout: string,
+  orientation: string,
+  stepPercent: number
+};
+
+function Links(props: Props) {
   return (
     <Fragment>
-      {links.map((link, i) => (
+      {props.links.map((link, i) => (
         <Link
           data={link}
-          linkType={linkType}
-          layout={layout}
-          orientation={orientation}
-          stepPercent={stepPercent}
+          linkType={props.linkType}
+          layout={props.layout}
+          orientation={props.orientation}
+          stepPercent={props.stepPercent}
           stroke="#374469"
           strokeWidth="1"
           fill="none"
@@ -18,7 +26,7 @@ function Links({ links, linkType, layout, orientation, stepPercent }) {
         />
       ))}
     </Fragment>
-  )
+  );
 }
 
-export default Links
+export default Links;
