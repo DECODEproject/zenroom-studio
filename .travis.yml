@@ -1,41 +1,41 @@
 sudo: true
-
 language: node_js
-
 node_js:
-  - node
-  - 9
-
+- node
+- 9
 cache:
   yarn: true
   directories:
-    - node_modules
-    - app/node_modules
-
+  - node_modules
+  - app/node_modules
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+    - ubuntu-toolchain-r-test
     packages:
-      - g++-4.8
-      - icnsutils
-      - graphicsmagick
-      - xz-utils
-      - xorriso
-
+    - g++-4.8
+    - icnsutils
+    - graphicsmagick
+    - xz-utils
+    - xorriso
 install:
-  - export CXX="g++-4.8"
-  - yarn
-  - cd app && yarn && cd ..
-  - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
-
+- export CXX="g++-4.8"
+- yarn
+- cd app && yarn && cd ..
+- "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile
+  --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
+before_install: yarn global add greenkeeper-lockfile@1
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start &
-  - sleep 3
-
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start &
+- sleep 3
+- greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
 script:
-  - node --version
-  - yarn package
-  - yarn test
-  - yarn test-e2e
+- node --version
+- yarn package
+- yarn test
+- yarn test-e2e
+env:
+  global:
+    secure: VidcRhP2CJ65ovD+qfXx4tSCyJbiM55EFTVmKEK9FEgvVrJairfy9mJf80pgtu4WEMjW8gncglKqfE7kp5VSiNj84Mxzoou8fuhaq435pzv30kOKyRISNSXyLhDbvr8oeWGD9bMeniCRlTpfSQmC1HuJdNUWWXToC4BTeht00TMlw3tixs92amlASbojuY6pEFO9/62ZnLs5vdYQrTcT8vl9iZ42yaI7uTufuyIivYRH8t6cHNkW7JSyge0+IR6oAFZBC2LmykOw/I9KMKkzCmJZ8xDh+EHhfrroy4Q8hcl8lQ9hlts6Aia5xzxvf4JBblKbV7arfvXfdVQt2pQ1pBUhfUXhSSThhG3cBm00c9PFPXKhzC8Tp2ER2ghTSCkHQhKSSOx1w3yMGa4g88ythRn13VUHCB4GwfJI6G3d3P4g75E5Q4qaxeMr7c1CY2rjz2V7ZM2SaGQFP/t/KGHDc1FVXh0zeYHnJTQekmpZyhSsl0p4p/VAp7PsH2eivluYfEGnvAOIBb47r9s317SGA+SB6Y9R16QV1CmO0nChtmbziXPGLPvjbR168TFpdC9hIwJn+M0YlOY3FyY2qd9N2iE+u5ZGwwwNyFzKYmwy2cPzn6bCvxW1aRWinvcPIDMitO+wDyTe6GItv19E3JA4iucmQhof95IOmx1b4XuIulk=
