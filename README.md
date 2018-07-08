@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="https://gitmoji.carloscuesta.me">
+	<a href="https://zenroom.dyne.org">
 		<img src="https://cdn.rawgit.com/DECODEproject/zenroom/develop/docs/logo/zenroom.svg" width="300" alt="zenroom studio">
 	</a>
 </p>
