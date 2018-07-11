@@ -19,7 +19,13 @@
 </p>
 
 
-# zenroom-studio
+# Zenroom Studio
+
+Zenroom Studio is a multiplatform (Gnu+Linux, Windows, macOS) IDE designed specifically to work with [Zenroom](https://github.com/DECODEproject/zenroom)
+
+The main use case for Zenroom is that of **distributed computing** of untrusted code where advanced cryptographic functions are required, for instance it can be used as a distributed ledger implementation (also known as **blockchain smart contracts**).
+
+Zenroom and Zenroom Studio are software in **ALPHA stage** and are part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
 
 <details>
  <summary><strong>Table of Contents</strong> (click to expand)</summary>
@@ -70,6 +76,10 @@ Designed, written and maintained by Puria Nafisi Azizi.
 Special thanks to Federico Bonelli and Jaromil for their expert reviews.
 
 This software used as a starting point the awesome [electron react boilerplate](https://github.com/chentsulin/electron-react-boilerplate) by @chentsulin
+
+<img src="https://zenroom.dyne.org/img/ec_logo.png" class="pic" alt="Project funded by the European Commission">
+
+This project is receiving funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement nr. 732546 (DECODE).
 
 ***
 ## :briefcase: License
