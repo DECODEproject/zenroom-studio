@@ -31,11 +31,11 @@ Zenroom and Zenroom Studio are software in **ALPHA stage** and are part of the [
  <summary><strong>Table of Contents</strong> (click to expand)</summary>
 
 * [Installation](#floppy_disk-installation)
-* [Usage](#️video_game-usage)
-* [Configuration](#️wrench-configuration)
+* [Usage](#video_game-usage)
+* [Configuration](#wrench-configuration)
 * [Notes](#memo-notes)
 * [Troubleshooting & debugging](#bug-troubleshooting--debugging)
-* [Acknowledgements](#️heart_eyes-acknowledgements)
+* [Acknowledgements](#heart_eyes-acknowledgements)
 * [License](#briefcase-license)
 </details>
 
