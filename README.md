@@ -29,10 +29,11 @@
 * [Configuration](#️wrench-configuration)
 * [Notes](#memo-notes)
 * [Troubleshooting & debugging](#bug-troubleshooting--debugging)
-* [Credits](#️heart_eyes-credits)
+* [Acknowledgements](#️heart_eyes-acknowledgements)
 * [License](#briefcase-license)
 </details>
 
+***
 ## :floppy_disk: Installation
 
 ### Desktop binaries
@@ -47,16 +48,30 @@ For developers the easiest way to get up and running is:
 yarn run dev
 ```
 
+***
 ## :video_game: Usage
 
+***
 ## :wrench: Configuration
 
+***
 ## :memo: Notes
 
+***
 ## :bug: Troubleshooting & debugging
 
-## :heart_eyes: Credits
+***
+## :heart_eyes: Acknowledgements
 
+Copyright (C) 2018 by [Dyne.org](https://www.dyne.org) foundation, Amsterdam
+
+Designed, written and maintained by Puria Nafisi Azizi.
+
+Special thanks to Federico Bonelli and Jaromil for their expert reviews.
+
+This software used as a starting point the awesome [electron react boilerplate](https://github.com/chentsulin/electron-react-boilerplate) by @chentsulin
+
+***
 ## :briefcase: License
 
     Zenroom Studio. The Zencode IDE
