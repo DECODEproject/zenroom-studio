@@ -5,7 +5,7 @@
 </p>
 <p align="center">
   	<a href="https://greenkeeper.io/">
-		<img src="https://badges.greenkeeper.io/puria/zenroom-studio.svg"
+		<img src="https://badges.greenkeeper.io/DECODEproject/zenroom-studio.svg"
 			 alt="Greenkeeper badge">
 	</a>
 	<a href="https://travis-ci.org/puria/zenroom-studio">
