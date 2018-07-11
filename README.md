@@ -24,13 +24,13 @@
 <details>
  <summary><strong>Table of Contents</strong> (click to expand)</summary>
 
-* [Installation](#-installation)
-* [Usage](#️-usage)
-* [Configuration](#️-configuration)
-* [Notes](#-notes)
-* [Troubleshooting & debugging](#-troubleshooting--debugging)
-* [Credits](#️-credits)
-* [License](#-license)
+* [Installation](#floppy_disk-installation)
+* [Usage](#️video_game-usage)
+* [Configuration](#️wrench-configuration)
+* [Notes](#memo-notes)
+* [Troubleshooting & debugging](#bug-troubleshooting--debugging)
+* [Credits](#️heart_eyes-credits)
+* [License](#briefcase-license)
 </details>
 
 ## :floppy_disk: Installation
