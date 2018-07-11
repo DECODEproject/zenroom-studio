@@ -162,6 +162,3 @@ This project is receiving funding from the European Union’s Horizon 2020 resea
 
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio?ref=badge_large)
