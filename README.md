@@ -8,11 +8,11 @@
 		<img src="https://badges.greenkeeper.io/DECODEproject/zenroom-studio.svg"
 			 alt="Greenkeeper badge">
 	</a>
-	<a href="https://travis-ci.org/puria/zenroom-studio">
-		<img src="https://travis-ci.org/puria/zenroom-studio.svg?branch=master"
+	<a href="https://travis-ci.org/DECODEproject/zenroom-studio">
+		<img src="https://travis-ci.org/DECODEproject/zenroom-studio.svg?branch=master"
 			 alt="Build Status">
 	</a>
-	<a href="https://ci.appveyor.com/project/puria/zenroom-studio">
+	<a href="https://ci.appveyor.com/project/DECODEproject/zenroom-studio">
 		<img src="https://ci.appveyor.com/api/projects/status/m6davb45pikwkg52?svg=true"
 			 alt="Build Status">
 	</a>
