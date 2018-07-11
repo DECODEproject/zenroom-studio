@@ -12,8 +12,8 @@
 		<img src="https://travis-ci.org/DECODEproject/zenroom-studio.svg?branch=master"
 			 alt="Build Status">
 	</a>
-	<a href="https://ci.appveyor.com/project/DECODEproject/zenroom-studio">
-		<img src="https://ci.appveyor.com/api/projects/status/m6davb45pikwkg52?svg=true"
+	<a href="https://ci.appveyor.com/project/puria/zenroom-studio-02nrq">
+		<img src="https://ci.appveyor.com/api/projects/status/kpd2m3ow42tns5vi?svg=true"
 			 alt="Build Status">
 	</a>
 </p>
