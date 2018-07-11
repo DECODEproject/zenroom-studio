@@ -51,6 +51,7 @@ To install in on yout desktop please download the following released binaries fo
 For developers the easiest way to get up and running is:
 
 ```bash
+yarn
 yarn run dev
 ```
 
