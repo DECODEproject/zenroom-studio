@@ -3,8 +3,13 @@
 		<img src="https://cdn.rawgit.com/DECODEproject/zenroom/develop/docs/logo/zenroom.svg" width="300" alt="zenroom studio">
 	</a>
 </p>
+
 <p align="center">
-  	<a href="https://greenkeeper.io/">
+  <a href="https://github.com/DECODEproject/zenroom-studio/releases/latest">
+		<img src="https://img.shields.io/github/release/DECODEproject/zenroom-studio/all.svg"
+			 alt="GitHub (pre-)release">
+	</a>
+  <a href="https://greenkeeper.io/">
 		<img src="https://badges.greenkeeper.io/DECODEproject/zenroom-studio.svg"
 			 alt="Greenkeeper badge">
 	</a>
@@ -12,11 +17,16 @@
 		<img src="https://travis-ci.org/DECODEproject/zenroom-studio.svg?branch=master"
 			 alt="Build Status">
 	</a>
-<a href="https://app.fossa.io/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio.svg?type=shield"/></a>
-	<a href="https://ci.appveyor.com/project/puria/zenroom-studio-02nrq">
+  <a href="https://app.fossa.io/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio.svg?type=shield"/>
+  </a>
+  <a href="https://ci.appveyor.com/project/puria/zenroom-studio-02nrq">
 		<img src="https://ci.appveyor.com/api/projects/status/kpd2m3ow42tns5vi?svg=true"
 			 alt="Build Status">
 	</a>
+  <a href="https://dyne.org">
+    <img src="https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%9D%A4%20by-Dyne.org-blue.svg" alt="Dyne.org">
+  </a>
 </p>
 
 
@@ -148,7 +158,7 @@ This project is receiving funding from the European Union’s Horizon 2020 resea
 
     Zenroom Studio. The Zencode IDE
     
-    Copyright (C) 2018  Puria Nafisi Azizi <puria@dyne.org>
+    Copyright (C) 2018  Dyne.org foundation, Amsterdam
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published
