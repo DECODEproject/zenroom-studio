@@ -12,6 +12,7 @@
 		<img src="https://travis-ci.org/DECODEproject/zenroom-studio.svg?branch=master"
 			 alt="Build Status">
 	</a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio.svg?type=shield"/></a>
 	<a href="https://ci.appveyor.com/project/puria/zenroom-studio-02nrq">
 		<img src="https://ci.appveyor.com/api/projects/status/kpd2m3ow42tns5vi?svg=true"
 			 alt="Build Status">
@@ -44,15 +45,23 @@ Zenroom and Zenroom Studio are software in **ALPHA stage** and are part of the [
 
 ### Desktop binaries
 
-To install in on yout desktop please download the following released binaries for you platform:
+To install in on yout desktop please download the following released binaries for you platform on the [release page](https://github.com/DECODEproject/zenroom-studio/releases/latest)
 
 ### Development
 
 For developers the easiest way to get up and running is:
 
+1. Checkout and install all the dependencies
+
 ```bash
+git clone https://github.com/DECODEproject/zenroom-studio.git
+cd zenroom-studio
 yarn
-yarn run dev
+```
+
+2. Run Zenroom Studio
+```bash
+yarn start
 ```
 
 ***
@@ -60,12 +69,64 @@ yarn run dev
 
 ***
 ## :wrench: Configuration
+As for now the software has no configuration. They are planned soon to be added, as soon as they are available all the options will be listed here.
 
 ***
 ## :memo: Notes
 
+### Packaging
+To build the packages for your platform there are some commands available listed below. Please note that in order to build the *windows executable* you need [Wine](https://www.winehq.org/) installed and configured, and for build the *mac .dmg package* you need to run the command on a macOS operating system.
+
+#### :apple: macOS
+
+`yarn package-mac`
+
+
+#### :penguin: Gnu+Linux
+
+`yarn package-linux`
+
+#### :checkered_flag: Windows
+
+`yarn package-win`
+
+#### To build all platforms
+
+`yarn package-all`
+
+
+### Linting
+All the code is configured to be linted with [ESLint](https://eslint.org/). So especially for new code contributions is preferrable to run and fix the lint suggestions.
+
+#### Javascript
+* Run the linter
+`yarn lint`
+
+* Automagically fix lint suggestions
+`yarn lint-fix`
+
+#### CSS
+* Run the linter
+`yarn lint-styles`
+
+* Automagically fix lint suggestions
+`yarn lint-styles-fix`
+
+
 ***
 ## :bug: Troubleshooting & debugging
+
+### Debug mode
+To run Zenroom Studio in debug mode you'll need first to install it on your local machine following the instructions listed in [Installation#Development](#development)
+and after run
+
+`yarn run dev`
+
+This will enable the inspector in electron/chrome and gives you more verbose output on the console.
+
+### Common problems
+* `error eslint@5.1.0: The engine "node" is incompatible with this module. Expected version "^6.14.0 || ^8.10.0 || >=9.10.0".` 
+You need to upgrade you node version to a newer version. Take a look [here](https://davidwalsh.name/upgrade-nodejs).
 
 ***
 ## :heart_eyes: Acknowledgements
