@@ -12,6 +12,7 @@
 		<img src="https://travis-ci.org/DECODEproject/zenroom-studio.svg?branch=master"
 			 alt="Build Status">
 	</a>
+<a href="https://app.fossa.io/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.io/api/projects/git%2Bgithub.com%2FDECODEproject%2Fzenroom-studio.svg?type=shield"/></a>
 	<a href="https://ci.appveyor.com/project/puria/zenroom-studio-02nrq">
 		<img src="https://ci.appveyor.com/api/projects/status/kpd2m3ow42tns5vi?svg=true"
 			 alt="Build Status">
