@@ -39,7 +39,7 @@ The main use case for Zenroom is that of **distributed computing** of untrusted 
 Zenroom and Zenroom Studio are software in **ALPHA stage** and are part of the [DECODE project](https://decodeproject.eu) about data-ownership and [technological sovereignty](https://www.youtube.com/watch?v=RvBRbwBm_nQ). Our effort is that of improving people's awareness of how their data is processed by algorithms, as well facilitate the work of developers to create along [privacy by design principles](https://decodeproject.eu/publications/privacy-design-strategies-decode-architecture) using algorithms that can be deployed in any situation without any change.
 
 <details>
- <summary><strong>Table of Contents</strong> (click to expand)</summary>
+ <summary><strong>:triangular_flag_on_post: Table of Contents</strong> (click to expand)</summary>
 
 * [Installation](#floppy_disk-installation)
 * [Usage](#video_game-usage)
