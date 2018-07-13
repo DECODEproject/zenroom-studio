@@ -48,24 +48,23 @@ function Links(props: Props) {
           };
         }}
       >
-        {links.map(link => (
-          // eslint-disable-line no-unused-vars
-          styles
-        ) => (
-          <Link
-            data={{
-              source: { x: styles.sx, y: styles.sy },
-              target: { x: styles.tx, y: styles.ty }
-            }}
-            linkType={linkType}
-            layout={layout}
-            orientation={orientation}
-            stepPercent={stepPercent}
-            stroke="#374469"
-            strokeWidth="1"
-            fill="none"
-          />
-        ))}
+        {links.map(
+          (link) /* eslint-disable-line no-unused-vars */ => styles => (
+            <Link
+              data={{
+                source: { x: styles.sx, y: styles.sy },
+                target: { x: styles.tx, y: styles.ty }
+              }}
+              linkType={linkType}
+              layout={layout}
+              orientation={orientation}
+              stepPercent={stepPercent}
+              stroke="#374469"
+              strokeWidth="1"
+              fill="none"
+            />
+          )
+        )}
       </Transition>
     </Group>
   );
