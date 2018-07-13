@@ -28,12 +28,13 @@
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/avatar@^13.0.0":
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-13.0.0.tgz#8d0a7b8f6a6a7344978decec0827271d8d9e7230"
+"@atlaskit/avatar@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-14.0.0.tgz#a506aecc552b8862a8d45e2886778f861e2ff2b0"
   dependencies:
-    "@atlaskit/theme" "^4.0.3"
-    "@atlaskit/tooltip" "^10.3.1"
+    "@atlaskit/analytics-next" "^3.0.0"
+    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/tooltip" "^11.0.0"
 
 "@atlaskit/badge@^9.0.0":
   version "9.0.0"
@@ -122,6 +123,15 @@
 "@atlaskit/layer-manager@^4.2.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@atlaskit/layer-manager/-/layer-manager-4.3.1.tgz#08fe6af287731ce12dd96991882b6d6eef06da27"
+  dependencies:
+    prop-types "^15.5.10"
+    react-focus-lock "^1.11.1"
+    react-scrolllock "^3.0.1"
+    react-transition-group "^2.2.1"
+
+"@atlaskit/layer-manager@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/layer-manager/-/layer-manager-5.0.0.tgz#3efde5313d98f581df78e791f145d20133b133a8"
   dependencies:
     prop-types "^15.5.10"
     react-focus-lock "^1.11.1"
@@ -237,6 +247,7 @@
 "@atlaskit/toggle@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-5.0.0.tgz#50479da697aab9bcaede560c2bd141c6f85d40f6"
+
   dependencies:
     "@atlaskit/analytics-next" "^3.0.0"
     "@atlaskit/icon" "^13.0.0"
@@ -249,6 +260,16 @@
   dependencies:
     "@atlaskit/layer-manager" "^4.2.1"
     "@atlaskit/theme" "^4.0.4"
+    react-deprecate "^0.1.0"
+    react-transition-group "^2.2.1"
+
+"@atlaskit/tooltip@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/tooltip/-/tooltip-11.0.0.tgz#5d8081c86cfcd4a30f4726e316fd587699fd929a"
+  dependencies:
+    "@atlaskit/analytics-next" "^3.0.0"
+    "@atlaskit/layer-manager" "^5.0.0"
+    "@atlaskit/theme" "^5.0.0"
     react-deprecate "^0.1.0"
     react-transition-group "^2.2.1"
 
