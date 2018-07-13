@@ -51,7 +51,9 @@ export default class extends React.Component {
             size={[sizeWidth, sizeHeight]}
             separation={(a, b) => (a.parent === b.parent ? 2 : 0.9) / a.depth}
           >
-            {({ data }) => (
+            {(
+              { data } // eslint-disable-line no-shadow
+            ) => (
               <Group top={origin.y} left={origin.x}>
                 <Links
                   links={data.links()}

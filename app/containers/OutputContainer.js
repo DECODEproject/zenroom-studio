@@ -19,11 +19,10 @@ const Terminal = styled.pre`
 `;
 
 type Props = {
-  children?: React.Node
+  children: ?React.Node
 };
 
 // export default class Home extends Component<Props> {
-
 
 const OutputContainer = (props: Props) => (
   <ParentSize>

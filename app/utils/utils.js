@@ -1,9 +1,7 @@
 export function findCollapsedParent(node) {
-  if (!node.data.isExpanded) {
-    return node;
-  } else if (node.parent) {
-    return findCollapsedParent(node.parent);
-  }
+  if (!node.data.isExpanded) return node;
+
+  if (node.parent) return findCollapsedParent(node.parent);
 
   return null;
 }

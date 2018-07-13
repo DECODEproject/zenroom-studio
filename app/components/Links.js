@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import Link from './Link';
 
 type Props = {
-  links: Array<Link>,
+  links: Array<React.Node>,
   linkType: string,
   layout: string,
   orientation: string,
@@ -10,19 +10,20 @@ type Props = {
 };
 
 function Links(props: Props) {
+  const { links, linkType, layout, orientation, stepPercent } = props;
   return (
     <Fragment>
-      {props.links.map((link, i) => (
+      {links.map((link, i) => (
         <Link
           data={link}
-          linkType={props.linkType}
-          layout={props.layout}
-          orientation={props.orientation}
-          stepPercent={props.stepPercent}
+          linkType={linkType}
+          layout={layout}
+          orientation={orientation}
+          stepPercent={stepPercent}
           stroke="#374469"
           strokeWidth="1"
           fill="none"
-          key={i}
+          key={i} // eslint-disable-line react/no-array-index-key
         />
       ))}
     </Fragment>

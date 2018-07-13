@@ -9,24 +9,30 @@ type Props = {
 function Node(props: Props) {
   const width = 40;
   const height = 20;
+  const {
+    node: {
+      depth,
+      data: { children },
+      name
+    },
+    onClick
+  } = props;
   return (
     <Fragment>
-      {props.node.depth === 0 && (
-        <circle r={20} fill="url('#lg')" onClick={props.onClick} />
-      )}
-      {props.node.depth !== 0 && (
+      {depth === 0 && <circle r={20} fill="url('#lg')" onClick={onClick} />}
+      {depth !== 0 && (
         <rect
           height={height}
           width={width}
           y={-height / 2}
           x={-width / 2}
           fill="#272b4d"
-          stroke={props.node.data.children ? '#03c0dc' : '#26deb0'}
+          stroke={children ? '#03c0dc' : '#26deb0'}
           strokeWidth={1}
-          strokeDasharray={!props.node.data.children ? '2,2' : '0'}
-          strokeOpacity={!props.node.data.children ? 0.6 : 1}
-          rx={!props.node.data.children ? 10 : 0}
-          onClick={props.onClick}
+          strokeDasharray={!children ? '2,2' : '0'}
+          strokeOpacity={!children ? 0.6 : 1}
+          rx={!children ? 10 : 0}
+          onClick={onClick}
         />
       )}
       <text
@@ -35,11 +41,9 @@ function Node(props: Props) {
         fontFamily="Arial"
         textAnchor="middle"
         style={{ pointerEvents: 'none' }}
-        fill={
-          props.node.depth === 0 ? '#71248e' : props.node.children ? 'white' : '#26deb0'
-        }
+        fill="white"
       >
-        {props.node.data.name}
+        {name}
       </text>
     </Fragment>
   );

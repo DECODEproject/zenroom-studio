@@ -13,12 +13,14 @@ export default class Home extends Component<Props> {
           <GridColumn medium={8}>
             <h1>Zenroom Studio</h1>
             <Link to="/editor">
-              <i className="fa fa-plus-circle" /> create a new project
+              <i className="fa fa-plus-circle" />
+              create a new project
             </Link>
             <br />
             <br />
             <Link to="/">
-              <i className="fa fa-folder" /> open a project
+              <i className="fa fa-folder" />
+              open a project
             </Link>
           </GridColumn>
           <GridColumn medium={4} />

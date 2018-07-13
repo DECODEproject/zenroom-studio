@@ -7,10 +7,11 @@ type Props = {
 };
 
 function Link(props: Props, ...innerProps) {
+  const { data, stepPercent } = props;
   return (
     <LinkHorizontal
-      data={props.data}
-      percent={props.stepPercent}
+      data={data}
+      percent={stepPercent}
       stroke="#374469"
       strokeWidth="1"
       fill="none"

@@ -6,7 +6,7 @@ import Link from './Link';
 import { findCollapsedParent } from '../utils/utils';
 
 type Props = {
-  links: Array<Link>,
+  links: Array<React.Node>,
   linkType: string,
   layout: string,
   orientation: string,
@@ -14,10 +14,11 @@ type Props = {
 };
 
 function Links(props: Props) {
+  const { links, linkType, layout, orientation, stepPercent } = props;
   return (
     <Group>
       <Transition
-        items={props.links}
+        items={links}
         keys={d => `${d.source.data.name}_${d.target.data.name}`}
         from={({ source }) => ({
           sx: source.data.x0,
@@ -47,16 +48,18 @@ function Links(props: Props) {
           };
         }}
       >
-        {props.links.map(link => styles => (
+        {links.map(link => (
+          styles // eslint-disable-line no-unused-vars
+        ) => (
           <Link
             data={{
               source: { x: styles.sx, y: styles.sy },
               target: { x: styles.tx, y: styles.ty }
             }}
-            linkType={props.linkType}
-            layout={props.layout}
-            orientation={props.orientation}
-            stepPercent={props.stepPercent}
+            linkType={linkType}
+            layout={layout}
+            orientation={orientation}
+            stepPercent={stepPercent}
             stroke="#374469"
             strokeWidth="1"
             fill="none"

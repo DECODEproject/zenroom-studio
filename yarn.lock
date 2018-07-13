@@ -22,6 +22,13 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@atlaskit/avatar@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-13.0.0.tgz#8d0a7b8f6a6a7344978decec0827271d8d9e7230"
+  dependencies:
+    "@atlaskit/theme" "^4.0.3"
+    "@atlaskit/tooltip" "^10.3.1"
+
 "@atlaskit/avatar@^14.0.0":
   version "14.0.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-14.0.0.tgz#a506aecc552b8862a8d45e2886778f861e2ff2b0"
@@ -93,6 +100,13 @@
     keycode "^2.1.7"
     prop-types "^15.5.10"
 
+"@atlaskit/icon@^12.1.2", "@atlaskit/icon@^12.6.2":
+  version "12.8.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-12.8.0.tgz#44095171300c664834937593b32b3b8515745eaa"
+  dependencies:
+    "@atlaskit/theme" "^4.0.4"
+    babel-runtime "^6.26.0"
+    uuid "^3.1.0"
 
 "@atlaskit/icon@^13.0.0":
   version "13.0.0"
@@ -237,6 +251,12 @@
     css-element-queries "^0.3.2"
     debounce "^1.0.0"
     keycode "^2.1.7"
+
+"@atlaskit/theme@^4.0.3", "@atlaskit/theme@^4.0.4":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-4.1.0.tgz#b3fec7722861af4b6dd9ee524bd57bf878e3bf09"
+  dependencies:
+    prop-types "^15.5.10"
 
 "@atlaskit/theme@^5.0.0":
   version "5.0.0"

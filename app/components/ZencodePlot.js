@@ -7,6 +7,7 @@ export default class ZencodePlot extends Component<Props> {
   props: Props;
 
   render() {
+    const { ast } = this.props;
     return (
       <ParentSize>
         {size =>
@@ -22,7 +23,7 @@ export default class ZencodePlot extends Component<Props> {
               }}
             >
               <Tree
-                data={this.props.ast}
+                data={ast}
                 width={size.width * 0.9}
                 height={size.height * 0.9}
               />
@@ -30,6 +31,6 @@ export default class ZencodePlot extends Component<Props> {
           )
         }
       </ParentSize>
-    ) 
+    );
   }
 }

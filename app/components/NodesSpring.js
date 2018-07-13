@@ -13,10 +13,12 @@ type Props = {
 };
 
 function Nodes(props: Props) {
+  const { nodes, layout, orientation, onNodeClick } = props;
+
   return (
     <Transition
       native
-      items={props.nodes}
+      items={nodes}
       keys={keyAccessor}
       config={{ tension: 1000, friction: 130, mass: 5 }}
       from={node => {
@@ -53,7 +55,11 @@ function Nodes(props: Props) {
           x: collapsedParent.data.x0,
           y: collapsedParent.data.y0
         };
-        const topLeft = getTopLeft(collapsedParentPrevPos, props.layout, props.orientation);
+        const topLeft = getTopLeft(
+          collapsedParentPrevPos,
+          props.layout,
+          props.orientation
+        );
         return {
           top: topLeft.top,
           left: topLeft.left,
@@ -61,7 +67,7 @@ function Nodes(props: Props) {
         };
       }}
     >
-      {props.nodes.map(node => styles => {
+      {nodes.map(node => styles => {
         const key = keyAccessor(node);
         return (
           <animated.g
@@ -83,9 +89,9 @@ function Nodes(props: Props) {
           >
             <Node
               node={node}
-              layout={props.layout}
-              orientation={props.orientation}
-              onClick={() => props.onNodeClick(node)}
+              layout={layout}
+              orientation={orientation}
+              onClick={() => onNodeClick(node)}
               key={key}
             />
           </animated.g>

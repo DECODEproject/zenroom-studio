@@ -9,20 +9,22 @@ import { getTopLeft } from '../utils/utils';
 type Props = {
   nodes: Array<Node>,
   layout: string,
-  orientation: string
+  orientation: string,
+  onNodeClick: () => mixed
 };
 
 function Nodes(props: Props) {
+  const { nodes, layout, orientation, onNodeClick } = props;
 
   return (
     <Fragment>
-      {props.nodes.map((node) => (
-        <Group {...getTopLeft(node, props.layout, props.orientation)} key={node}>
+      {nodes.map(node => (
+        <Group {...getTopLeft(node, layout, orientation)} key={node}>
           <Node
             node={node}
-            layout={props.layout}
-            orientation={props.orientation}
-            onClick={() => props.onNodeClick(node)}
+            layout={layout}
+            orientation={orientation}
+            onClick={() => onNodeClick(node)}
           />
         </Group>
       ))}
