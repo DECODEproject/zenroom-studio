@@ -49,7 +49,8 @@ function Links(props: Props) {
         }}
       >
         {links.map(link => (
-          styles // eslint-disable-line no-unused-vars
+          // eslint-disable-line no-unused-vars
+          styles
         ) => (
           <Link
             data={{
