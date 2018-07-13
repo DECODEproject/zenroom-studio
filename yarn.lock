@@ -35,11 +35,11 @@
     "@atlaskit/theme" "^4.0.3"
     "@atlaskit/tooltip" "^10.3.1"
 
-"@atlaskit/badge@^8.0.3":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/badge/-/badge-8.1.0.tgz#4437c3fa74704d28437fbaccd9d81fbc1f5f6c63"
+"@atlaskit/badge@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/badge/-/badge-9.0.0.tgz#3dcafce9564cdbadc3fed8dd59f857ceef81f1e8"
   dependencies:
-    "@atlaskit/theme" "^4.0.3"
+    "@atlaskit/theme" "^5.0.0"
     babel-runtime "^6.26.0"
 
 "@atlaskit/blanket@^6.0.2":
@@ -180,9 +180,9 @@
     react-scrolllock "^3.0.1"
     react-transition-group "^2.2.1"
 
-"@atlaskit/page@^7.0.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-7.2.1.tgz#5d1c007c1e61df6d13c2b0098c1f578d9b038579"
+"@atlaskit/page@^8.0.0":
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-8.0.0.tgz#c37a8e90dd82106e9f99a1504500f253e8132342"
 
 "@atlaskit/polyfills@^2.0.4":
   version "2.0.4"
@@ -227,12 +227,6 @@
     css-element-queries "^0.3.2"
     debounce "^1.0.0"
     keycode "^2.1.7"
-
-"@atlaskit/theme@^4.0.3", "@atlaskit/theme@^4.0.4":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-4.1.0.tgz#b3fec7722861af4b6dd9ee524bd57bf878e3bf09"
-  dependencies:
-    prop-types "^15.5.10"
 
 "@atlaskit/theme@^5.0.0":
   version "5.0.0"
