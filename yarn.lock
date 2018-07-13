@@ -94,7 +94,7 @@
     keycode "^2.1.7"
     prop-types "^15.5.10"
 
-"@atlaskit/icon@^12.1.2", "@atlaskit/icon@^12.2.0", "@atlaskit/icon@^12.3.1", "@atlaskit/icon@^12.6.1", "@atlaskit/icon@^12.6.2":
+"@atlaskit/icon@^12.1.2", "@atlaskit/icon@^12.3.1", "@atlaskit/icon@^12.6.1", "@atlaskit/icon@^12.6.2":
   version "12.8.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-12.8.0.tgz#44095171300c664834937593b32b3b8515745eaa"
   dependencies:
