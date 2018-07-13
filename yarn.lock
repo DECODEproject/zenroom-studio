@@ -16,6 +16,12 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@atlaskit/analytics-next@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.0.tgz#66a7bebd20e38e1b0e4e219bb004c53b8fbb9a90"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@atlaskit/analytics@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics/-/analytics-3.0.6.tgz#b9dd682015305f98cd80bdf92f602264d0e4c9ba"
@@ -93,6 +99,14 @@
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-12.8.0.tgz#44095171300c664834937593b32b3b8515745eaa"
   dependencies:
     "@atlaskit/theme" "^4.0.4"
+    babel-runtime "^6.26.0"
+    uuid "^3.1.0"
+
+"@atlaskit/icon@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-13.0.0.tgz#4b192716e5df93e7e3678460148b5611bc13e5cd"
+  dependencies:
+    "@atlaskit/theme" "^5.0.0"
     babel-runtime "^6.26.0"
     uuid "^3.1.0"
 
@@ -214,24 +228,19 @@
     debounce "^1.0.0"
     keycode "^2.1.7"
 
-"@atlaskit/theme@^4.0.3", "@atlaskit/theme@^4.0.4":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-4.1.0.tgz#b3fec7722861af4b6dd9ee524bd57bf878e3bf09"
-  dependencies:
-    prop-types "^15.5.10"
-
 "@atlaskit/theme@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-5.0.0.tgz#81a157a7e4dbbcb9701c5ec170e7c7e05b075a1f"
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/toggle@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-4.0.3.tgz#b79ef17b7c8ecccf7ca897c343f90b33ec53ffc5"
+"@atlaskit/toggle@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-5.0.0.tgz#50479da697aab9bcaede560c2bd141c6f85d40f6"
   dependencies:
-    "@atlaskit/icon" "^12.1.2"
-    "@atlaskit/theme" "^4.0.4"
+    "@atlaskit/analytics-next" "^3.0.0"
+    "@atlaskit/icon" "^13.0.0"
+    "@atlaskit/theme" "^5.0.0"
     uuid "^3.1.0"
 
 "@atlaskit/tooltip@^10.2.1", "@atlaskit/tooltip@^10.3.1":
