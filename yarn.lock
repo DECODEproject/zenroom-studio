@@ -16,6 +16,12 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@atlaskit/analytics-next@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.0.tgz#66a7bebd20e38e1b0e4e219bb004c53b8fbb9a90"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@atlaskit/analytics@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics/-/analytics-3.0.6.tgz#b9dd682015305f98cd80bdf92f602264d0e4c9ba"
@@ -28,6 +34,14 @@
   dependencies:
     "@atlaskit/theme" "^4.0.3"
     "@atlaskit/tooltip" "^10.3.1"
+
+"@atlaskit/avatar@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-14.0.0.tgz#a506aecc552b8862a8d45e2886778f861e2ff2b0"
+  dependencies:
+    "@atlaskit/analytics-next" "^3.0.0"
+    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/tooltip" "^11.0.0"
 
 "@atlaskit/badge@^8.0.3":
   version "8.1.0"
@@ -108,6 +122,15 @@
 "@atlaskit/layer-manager@^4.2.1":
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/@atlaskit/layer-manager/-/layer-manager-4.3.1.tgz#08fe6af287731ce12dd96991882b6d6eef06da27"
+  dependencies:
+    prop-types "^15.5.10"
+    react-focus-lock "^1.11.1"
+    react-scrolllock "^3.0.1"
+    react-transition-group "^2.2.1"
+
+"@atlaskit/layer-manager@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/layer-manager/-/layer-manager-5.0.0.tgz#3efde5313d98f581df78e791f145d20133b133a8"
   dependencies:
     prop-types "^15.5.10"
     react-focus-lock "^1.11.1"
@@ -220,6 +243,12 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@atlaskit/theme@^5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-5.0.0.tgz#81a157a7e4dbbcb9701c5ec170e7c7e05b075a1f"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@atlaskit/toggle@^4.0.3":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-4.0.3.tgz#b79ef17b7c8ecccf7ca897c343f90b33ec53ffc5"
@@ -234,6 +263,16 @@
   dependencies:
     "@atlaskit/layer-manager" "^4.2.1"
     "@atlaskit/theme" "^4.0.4"
+    react-deprecate "^0.1.0"
+    react-transition-group "^2.2.1"
+
+"@atlaskit/tooltip@^11.0.0":
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/tooltip/-/tooltip-11.0.0.tgz#5d8081c86cfcd4a30f4726e316fd587699fd929a"
+  dependencies:
+    "@atlaskit/analytics-next" "^3.0.0"
+    "@atlaskit/layer-manager" "^5.0.0"
+    "@atlaskit/theme" "^5.0.0"
     react-deprecate "^0.1.0"
     react-transition-group "^2.2.1"
 
