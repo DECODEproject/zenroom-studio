@@ -208,7 +208,7 @@
     "@atlaskit/tabs": "^7.1.3",
     "@atlaskit/toggle": "^5.0.0",
     "@vx/gradient": "^0.0.165",
-    "@vx/group": "^0.0.165",
+    "@vx/group": "^0.0.170",
     "@vx/hierarchy": "^0.0.165",
     "@vx/responsive": "^0.0.165",
     "@vx/shape": "^0.0.168",
