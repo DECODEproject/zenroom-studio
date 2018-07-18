@@ -511,23 +511,17 @@
     classnames "^2.2.5"
     prop-types "^15.5.7"
 
-"@vx/group@0.0.165", "@vx/group@^0.0.165":
-  version "0.0.165"
-  resolved "https://registry.yarnpkg.com/@vx/group/-/group-0.0.165.tgz#2342523225de94859b5be49c3072dc6bb6795e78"
-  dependencies:
-    classnames "^2.2.5"
-
 "@vx/group@0.0.170":
   version "0.0.170"
   resolved "https://registry.yarnpkg.com/@vx/group/-/group-0.0.170.tgz#8b30b3ea07c348fe22253812fe7cb6d4200d725d"
   dependencies:
     classnames "^2.2.5"
 
-"@vx/hierarchy@^0.0.165":
-  version "0.0.165"
-  resolved "https://registry.yarnpkg.com/@vx/hierarchy/-/hierarchy-0.0.165.tgz#23b1076216830428c016ae7854ed084eb1779dac"
+"@vx/hierarchy@^0.0.170":
+  version "0.0.170"
+  resolved "https://registry.yarnpkg.com/@vx/hierarchy/-/hierarchy-0.0.170.tgz#176cf80b790515170d95f367a36bd9b1a3a9ccb0"
   dependencies:
-    "@vx/group" "0.0.165"
+    "@vx/group" "0.0.170"
     classnames "^2.2.5"
     d3-hierarchy "^1.1.4"
     prop-types "^15.6.1"
