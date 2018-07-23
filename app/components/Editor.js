@@ -89,7 +89,7 @@ export default class Editor extends Component<Props> {
 
     if (typeof ast !== 'object') return;
 
-    const name = (ast.tag === 'Id' || ast.tag === 'String') ? ast['1'] : `${ast.tag} ${Math.random().toString(36).substr(2, 4)}`;
+    const name = (ast.tag === 'Id' || ast.tag === 'String') ? `${ast[1]} ${Math.random().toString(36).substr(2, 2)}` : `${ast.tag} ${Math.random().toString(36).substr(2, 2)}`;
     const element = { name, children: [] };
     for (let i = 1; i <= childCount; i += 1) {
       this.parseAstToData(ast[i], element);
@@ -289,7 +289,7 @@ export default class Editor extends Component<Props> {
               <TabList>
                 <Tab>OUTPUT</Tab>
                 <Tab>
-                  ERROR
+                  ERROR &nbsp;
                   <Badge
                     value={this.state.errorCounter}
                     max={99}

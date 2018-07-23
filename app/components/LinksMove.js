@@ -6,7 +6,7 @@ import Link from './Link';
 import { findCollapsedParent } from '../utils/utils';
 
 type Props = {
-  links: Array<Link>,
+  links: Array<Ract.Node>,
   linkType: string,
   layout: string,
   orientation: string,

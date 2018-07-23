@@ -7,7 +7,7 @@ type Props = {
 };
 
 function Node(props: Props) {
-  const width = 40;
+  const width = 60;
   const height = 20;
   return (
     <Fragment>
@@ -31,7 +31,7 @@ function Node(props: Props) {
       )}
       <text
         dy=".33em"
-        fontSize={9}
+        fontSize={10}
         fontFamily="Arial"
         textAnchor="middle"
         style={{ pointerEvents: 'none' }}
