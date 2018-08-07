@@ -186,7 +186,7 @@
     "sass-loader": "^7.0.1",
     "sinon": "^6.1.0",
     "spectron": "^3.8.0",
-    "style-loader": "^0.21.0",
+    "style-loader": "^0.22.0",
     "stylefmt": "^6.0.0",
     "stylelint": "^9.2.1",
     "stylelint-config-standard": "^18.2.0",
