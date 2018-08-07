@@ -538,9 +538,9 @@
     prop-types "^15.6.1"
     resize-observer-polyfill "1.5.0"
 
-"@vx/shape@^0.0.170":
-  version "0.0.170"
-  resolved "https://registry.yarnpkg.com/@vx/shape/-/shape-0.0.170.tgz#55cf5968f7a6465484aac1a5541275b4813bb9a2"
+"@vx/shape@^0.0.171":
+  version "0.0.171"
+  resolved "https://registry.yarnpkg.com/@vx/shape/-/shape-0.0.171.tgz#65226fc7976025a343b40c57fff442eea32ee4c0"
   dependencies:
     "@vx/curve" "0.0.165"
     "@vx/group" "0.0.170"
