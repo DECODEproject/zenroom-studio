@@ -210,7 +210,7 @@
     "@vx/gradient": "^0.0.165",
     "@vx/group": "^0.0.170",
     "@vx/hierarchy": "^0.0.170",
-    "@vx/responsive": "^0.0.165",
+    "@vx/responsive": "^0.0.172",
     "@vx/shape": "^0.0.170",
     "d3-hierarchy": "^1.1.6",
     "devtron": "^1.4.0",
