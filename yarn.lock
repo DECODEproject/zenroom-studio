@@ -16,6 +16,12 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@atlaskit/analytics-next@^3.0.2":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.2.tgz#af6d41daca8d223e0f80a466bf82e9276418daa9"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@atlaskit/analytics@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics/-/analytics-4.0.0.tgz#030cc6fc5d19dfce736f0a69466bd1b93f7fe959"
@@ -242,11 +248,12 @@
     babel-runtime "^6.26.0"
     react-transition-group "^2.2.1"
 
-"@atlaskit/tabs@^7.1.3":
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/tabs/-/tabs-7.1.3.tgz#5813809a7f973363e80963a4a3076eb0267d18f0"
+"@atlaskit/tabs@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/tabs/-/tabs-8.0.3.tgz#649794f0eb8bdff4c8338e5591ef759aaad77066"
   dependencies:
-    "@atlaskit/theme" "^4.0.4"
+    "@atlaskit/analytics-next" "^3.0.2"
+    "@atlaskit/theme" "^5.1.1"
     classnames "^2.2.5"
     css-element-queries "^0.3.2"
     debounce "^1.0.0"
@@ -261,6 +268,12 @@
 "@atlaskit/theme@^5.0.0":
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-5.0.0.tgz#81a157a7e4dbbcb9701c5ec170e7c7e05b075a1f"
+  dependencies:
+    prop-types "^15.5.10"
+
+"@atlaskit/theme@^5.1.1":
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-5.1.1.tgz#072fbdeda199c95b5fafc0928bd44596222d7080"
   dependencies:
     prop-types "^15.5.10"
 
