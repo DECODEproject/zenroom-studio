@@ -20,19 +20,8 @@ import Navigation, { Skeleton } from '@atlaskit/navigation';
 import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
 
 import OutputContainer from '../containers/OutputContainer';
+import ConfigTabs from '../containers/ConfigTabs';
 import ZencodePlot from './ZencodePlot';
-
-export const jsonEditorProps = {
-  mode: 'json',
-  height: '200px',
-  width: '100vw',
-  fontSize: 15,
-  theme: 'dracula',
-  showPrintMargin: false,
-  enableBasicAutocompletion: true,
-  enableLiveAutocompletion: true,
-  editorProps: { $blockScrolling: true }
-};
 
 export const outputEditorProps = {
   theme: 'dracula',
@@ -83,13 +72,19 @@ export default class Editor extends Component<Props> {
     this.debugLog = '';
   }
 
-
   parseAstToData = (ast, result) => {
     const childCount = Object.keys(ast).length - 2;
 
     if (typeof ast !== 'object') return;
 
-    const name = (ast.tag === 'Id' || ast.tag === 'String') ? `${ast[1]} ${Math.random().toString(36).substr(2, 2)}` : `${ast.tag} ${Math.random().toString(36).substr(2, 2)}`;
+    const name =
+      ast.tag === 'Id' || ast.tag === 'String'
+        ? `${ast[1]} ${Math.random()
+            .toString(36)
+            .substr(2, 2)}`
+        : `${ast.tag} ${Math.random()
+            .toString(36)
+            .substr(2, 2)}`;
     const element = { name, children: [] };
     for (let i = 1; i <= childCount; i += 1) {
       this.parseAstToData(ast[i], element);
@@ -104,9 +99,7 @@ export default class Editor extends Component<Props> {
 
     try {
       json = JSON.parse(msg);
-    } catch (e) {
-      ;
-    }
+    } catch (e) {}
 
     if (json instanceof Object) {
       const dataResult = { name: 'start', children: [] };
@@ -246,44 +239,14 @@ export default class Editor extends Component<Props> {
             />
           </GridColumn>
           <GridColumn medium={5} spacing="compact">
-            <Tabs>
-              <TabList>
-                <Tab>DATA</Tab>
-                <Tab>KEYS</Tab>
-                <Tab>CONFIG</Tab>
-              </TabList>
-
-              <TabPanel>
-                <OutputContainer>
-                  <AceEditor
-                    {...jsonEditorProps}
-                    name="zenroom--data--editor"
-                    onChange={this.onDataChange}
-                    value={this.state.zendata}
-                  />
-                </OutputContainer>
-              </TabPanel>
-              <TabPanel>
-                <OutputContainer>
-                  <AceEditor
-                    {...jsonEditorProps}
-                    name="zenroom--keys--editor"
-                    onChange={this.onKeysChange}
-                    value={this.state.zenkeys}
-                  />
-                </OutputContainer>
-              </TabPanel>
-              <TabPanel>
-                <OutputContainer>
-                  <AceEditor
-                    {...jsonEditorProps}
-                    name="zenroom--config--editor"
-                    onChange={this.onKeysChange}
-                    value={this.state.zenconfig}
-                  />
-                </OutputContainer>
-              </TabPanel>
-            </Tabs>
+            <ConfigTabs
+              onDataChange={this.onDataChange}
+              onKeysChange={this.onKeysChange}
+              onConfigChange={this.onConfigChange}
+              zendata={this.state.zendata}
+              zenkeys={this.state.zenkeys}
+              zenconfig={this.state.zenconfig}
+            />
 
             <Tabs>
               <TabList>
@@ -322,7 +285,7 @@ export default class Editor extends Component<Props> {
               </TabPanel>
               <TabPanel>
                 <AceEditor
-                  {...jsonEditorProps}
+                  {...outputEditorProps}
                   name="zenroom--ast--editor"
                   value={JSON.stringify(this.state.outputAst)}
                   readOnly
