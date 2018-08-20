@@ -84,7 +84,9 @@ export default class Editor extends Component<Props> {
 
     try {
       json = JSON.parse(msg);
-    } catch (e) {}
+    } catch (e) {
+      // empty
+    }
 
     if (json instanceof Object) {
       const dataResult = { name: 'start', children: [] };
