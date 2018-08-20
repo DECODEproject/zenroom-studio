@@ -8,31 +8,16 @@ import 'brace/theme/monokai';
 import 'brace/theme/dracula';
 import 'brace/ext/language_tools';
 
-import Badge from '@atlaskit/badge';
 import Button from '@atlaskit/button';
 import Toggle from '@atlaskit/toggle';
-import TrashIcon from '@atlaskit/icon/glyph/trash';
 import PlayIcon from '@atlaskit/icon/glyph/vid-play';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
 import Navigation, { Skeleton } from '@atlaskit/navigation';
 import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
 
-import OutputContainer from '../containers/OutputContainer';
 import ConfigTabs from '../containers/ConfigTabs';
-import ZencodePlot from './ZencodePlot';
-
-export const outputEditorProps = {
-  theme: 'dracula',
-  height: '600px',
-  width: '100vw',
-  highlightActiveLine: false,
-  showGutter: false,
-  showPrintMargin: false,
-  wrapEnabled: true,
-  readOnly: true
-};
+import OutputTabs from '../containers/OutputTabs';
 
 export default class Editor extends Component<Props> {
   props: Props;
@@ -248,55 +233,13 @@ export default class Editor extends Component<Props> {
               zenconfig={this.state.zenconfig}
             />
 
-            <Tabs>
-              <TabList>
-                <Tab>OUTPUT</Tab>
-                <Tab>
-                  ERROR &nbsp;
-                  <Badge
-                    value={this.state.errorCounter}
-                    max={99}
-                    appearance={
-                      this.state.errorCounter ? 'important' : 'primaryInverted'
-                    }
-                  />
-                </Tab>
-                <Tab>DEBUG</Tab>
-                <Tab>AST</Tab>
-                <Tab>VISUAL CODE</Tab>
-              </TabList>
-
-              <TabPanel>
-                <OutputContainer>
-                  <Button iconBefore={<TrashIcon />} />
-                  <AceEditor
-                    {...outputEditorProps}
-                    name="zenroom--output--editor"
-                    value={this.state.outputLog}
-                    readOnly
-                  />
-                </OutputContainer>
-              </TabPanel>
-              <TabPanel>
-                <OutputContainer>{this.state.errorLog}</OutputContainer>
-              </TabPanel>
-              <TabPanel>
-                <OutputContainer>{this.state.debugLog}</OutputContainer>
-              </TabPanel>
-              <TabPanel>
-                <AceEditor
-                  {...outputEditorProps}
-                  name="zenroom--ast--editor"
-                  value={JSON.stringify(this.state.outputAst)}
-                  readOnly
-                />
-              </TabPanel>
-              <TabPanel>
-                <OutputContainer>
-                  <ZencodePlot ast={this.state.outputAst} />
-                </OutputContainer>
-              </TabPanel>
-            </Tabs>
+            <OutputTabs
+              errorCounter={this.state.errorCounter}
+              outputLog={this.state.outputLog}
+              errorLog={this.state.errorLog}
+              debugLog={this.state.debugLog}
+              outputAst={this.state.outputAst}
+            />
           </GridColumn>
         </Grid>
       </Page>

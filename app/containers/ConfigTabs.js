@@ -6,7 +6,7 @@ import 'brace/mode/json';
 import 'brace/theme/github';
 import 'brace/ext/language_tools';
 
-import OutputContainer from '../containers/OutputContainer';
+import OutputContainer from './OutputContainer';
 
 export const jsonEditorProps = {
   mode: 'json',
