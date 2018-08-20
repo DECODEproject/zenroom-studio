@@ -1,23 +1,11 @@
 // @flow
 import React, { Component } from 'react';
-
-import AceEditor from 'react-ace';
-import 'brace/mode/lua';
-import 'brace/mode/json';
-import 'brace/theme/monokai';
-import 'brace/theme/dracula';
-import 'brace/ext/language_tools';
-
-import Button from '@atlaskit/button';
-import Toggle from '@atlaskit/toggle';
-import PlayIcon from '@atlaskit/icon/glyph/vid-play';
 import Page, { Grid, GridColumn } from '@atlaskit/page';
-import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
 import Navigation, { Skeleton } from '@atlaskit/navigation';
-import AstIcon from '@atlaskit/icon/glyph/bitbucket/branches';
 
 import ConfigTabs from '../containers/ConfigTabs';
 import OutputTabs from '../containers/OutputTabs';
+import ZencodeEditor from '../containers/ZencodeEditor';
 
 export default class Editor extends Component<Props> {
   props: Props;
@@ -189,40 +177,14 @@ export default class Editor extends Component<Props> {
       >
         <Grid layout="fluid" spacing="compact">
           <GridColumn medium={7} spacing="compact">
-            <div>
-              <Button
-                onClick={this.toggleNavigation}
-                iconBefore={<DashboardIcon>expand</DashboardIcon>}
-              />
-              <Button
-                id="run"
-                onClick={this.zenRun}
-                iconBefore={<PlayIcon label="run">run</PlayIcon>}
-                isDisabled={this.state.isLive}
-              />
-              <Button
-                onClick={this.zenAst}
-                iconBefore={<AstIcon label="ast">ast</AstIcon>}
-              />
-              <Toggle onChange={this.toggleLiveCompile} />
-              <span>live compile</span>
-            </div>
-            <AceEditor
-              onChange={this.onCodeChange}
-              highlightActiveLine
-              mode="lua"
-              value={this.state.zencode}
-              focus
-              height="calc(100vh - 37px)"
-              width="auto"
-              debounceChangePeriod={600}
-              fontSize={15}
-              theme="monokai"
-              name="zenroom--editor"
-              showPrintMargin={false}
-              enableBasicAutocompletion
-              enableLiveAutocompletion
-              editorProps={{ $blockScrolling: true }}
+            <ZencodeEditor
+              toggleNavigation={this.toggleNavigation}
+              toggleLiveCompile={this.toggleLiveCompile}
+              zenRun={this.zenRun}
+              zenAst={this.zenAst}
+              zencode={this.state.zencode}
+              isLive={this.state.isLive}
+              onCodeChange={this.onCodeChange}
             />
           </GridColumn>
           <GridColumn medium={5} spacing="compact">
