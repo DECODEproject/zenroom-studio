@@ -199,7 +199,7 @@
     "webpack-merge": "^4.1.2"
   },
   "dependencies": {
-    "@atlaskit/avatar": "^11.2.0",
+    "@atlaskit/avatar": "^14.0.9",
     "@atlaskit/badge": "^9.1.2",
     "@atlaskit/icon": "^12.2.0",
     "@atlaskit/navigation": "^32.2.2",
