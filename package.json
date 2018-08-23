@@ -200,7 +200,7 @@
   },
   "dependencies": {
     "@atlaskit/avatar": "^11.2.0",
-    "@atlaskit/badge": "^8.0.3",
+    "@atlaskit/badge": "^9.1.2",
     "@atlaskit/icon": "^12.2.0",
     "@atlaskit/navigation": "^32.2.2",
     "@atlaskit/page": "^7.0.1",

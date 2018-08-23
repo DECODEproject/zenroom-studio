@@ -10,17 +10,26 @@
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/7zip/-/7zip-0.0.6.tgz#9cafb171af82329490353b4816f03347aa150a30"
 
-"@atlaskit/analytics-next@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.0.tgz#66a7bebd20e38e1b0e4e219bb004c53b8fbb9a90"
+"@atlaskit/analytics-next@^2.1.8":
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-2.1.9.tgz#5820e74b0d00aa7822f92554ad62bdaa30804fed"
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/analytics@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/analytics/-/analytics-4.0.0.tgz#030cc6fc5d19dfce736f0a69466bd1b93f7fe959"
+"@atlaskit/analytics@^3.0.6":
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics/-/analytics-3.0.6.tgz#b9dd682015305f98cd80bdf92f602264d0e4c9ba"
   dependencies:
     prop-types "^15.5.10"
+
+"@atlaskit/avatar@^11.2.0":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-11.2.2.tgz#14038bbc0c64476c7b3d482bd52acfb32790ec2f"
+  dependencies:
+    "@atlaskit/dropdown-menu" "^5.2.1"
+    "@atlaskit/item" "^7.0.4"
+    "@atlaskit/theme" "^4.0.3"
+    "@atlaskit/tooltip" "^10.3.1"
 
 "@atlaskit/avatar@^13.0.0":
   version "13.0.0"
@@ -29,78 +38,66 @@
     "@atlaskit/theme" "^4.0.3"
     "@atlaskit/tooltip" "^10.3.1"
 
-"@atlaskit/avatar@^14.0.0":
-  version "14.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/avatar/-/avatar-14.0.0.tgz#a506aecc552b8862a8d45e2886778f861e2ff2b0"
+"@atlaskit/badge@^9.1.2":
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/badge/-/badge-9.1.2.tgz#427b37788442968de4471cfb54e891172f9eb551"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/theme" "^5.0.0"
-    "@atlaskit/tooltip" "^11.0.0"
-
-"@atlaskit/badge@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/badge/-/badge-9.0.0.tgz#3dcafce9564cdbadc3fed8dd59f857ceef81f1e8"
-  dependencies:
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/theme" "^6.0.0"
     babel-runtime "^6.26.0"
 
-"@atlaskit/blanket@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/blanket/-/blanket-7.0.0.tgz#2fd8a3275e880d8788a612832043e8d454fcd736"
+"@atlaskit/blanket@^6.0.2":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/blanket/-/blanket-6.0.3.tgz#f39aa4ea721de45bdb4b4645f7b25f58f1d8913b"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/theme" "^4.0.3"
 
-"@atlaskit/button@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/button/-/button-9.0.0.tgz#a2ebd68729db3d77dc19185bc9df7ccbef008059"
+"@atlaskit/button@^8.2.5":
+  version "8.2.7"
+  resolved "https://registry.yarnpkg.com/@atlaskit/button/-/button-8.2.7.tgz#28d1797bf20a57ae01065df72f7810fd59105c15"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/spinner" "9.0.0"
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/analytics-next" "^2.1.8"
+    "@atlaskit/spinner" "8.0.0"
+    "@atlaskit/theme" "^4.0.4"
     babel-runtime "^6.26.0"
 
-"@atlaskit/checkbox@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/checkbox/-/checkbox-4.0.0.tgz#53f26fa505a720d33add7639372852e2c8a296f5"
+"@atlaskit/checkbox@^3.1.2":
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/checkbox/-/checkbox-3.1.3.tgz#d59bcb589e9f2b4759b96e99c0dfbbb5ad9a9a82"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/icon" "^13.0.0"
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/icon" "^12.3.1"
+    "@atlaskit/theme" "^4.0.4"
     babel-runtime "^6.26.0"
     prop-types "^15.5.10"
 
-"@atlaskit/dropdown-menu@^6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/dropdown-menu/-/dropdown-menu-6.0.0.tgz#21223ae0a548bf921d416f0d9e621a824fdde9bb"
+"@atlaskit/dropdown-menu@^5.2.1", "@atlaskit/dropdown-menu@^5.2.3":
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/dropdown-menu/-/dropdown-menu-5.2.3.tgz#ac7ed0473f2db32ea721176deff842078dde5f5e"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/button" "^9.0.0"
-    "@atlaskit/droplist" "^7.0.0"
-    "@atlaskit/icon" "^13.0.0"
-    "@atlaskit/item" "^8.0.0"
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/button" "^8.2.5"
+    "@atlaskit/droplist" "^6.2.2"
+    "@atlaskit/icon" "^12.6.1"
+    "@atlaskit/item" "^7.0.8"
+    "@atlaskit/theme" "^4.0.4"
     array-find "^1.0.0"
     prop-types "^15.5.10"
     uuid "^3.1.0"
 
-"@atlaskit/droplist@^7.0.0":
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/droplist/-/droplist-7.0.0.tgz#1a7ddbed1392ad176990be331736018b6836d4e6"
+"@atlaskit/droplist@^6.2.2":
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/droplist/-/droplist-6.2.2.tgz#ed05ec073e7fe185679712b39b1b9a7a926c16ec"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/icon" "^13.0.0"
-    "@atlaskit/item" "^8.0.0"
-    "@atlaskit/layer" "^5.0.0"
-    "@atlaskit/spinner" "^9.0.0"
-    "@atlaskit/theme" "^5.0.0"
-    "@atlaskit/tooltip" "^11.0.0"
+    "@atlaskit/icon" "^12.6.1"
+    "@atlaskit/item" "^7.0.5"
+    "@atlaskit/layer" "^4.2.0"
+    "@atlaskit/spinner" "^8.0.0"
+    "@atlaskit/theme" "^4.0.4"
+    "@atlaskit/tooltip" "^10.2.1"
     babel-runtime "^6.26.0"
     classnames "^2.2.5"
     keycode "^2.1.7"
     prop-types "^15.5.10"
 
-"@atlaskit/icon@^12.1.2", "@atlaskit/icon@^12.6.2":
+"@atlaskit/icon@^12.1.2", "@atlaskit/icon@^12.2.0", "@atlaskit/icon@^12.3.1", "@atlaskit/icon@^12.6.1":
   version "12.8.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-12.8.0.tgz#44095171300c664834937593b32b3b8515745eaa"
   dependencies:
@@ -108,19 +105,11 @@
     babel-runtime "^6.26.0"
     uuid "^3.1.0"
 
-"@atlaskit/icon@^13.0.0":
-  version "13.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-13.0.0.tgz#4b192716e5df93e7e3678460148b5611bc13e5cd"
+"@atlaskit/item@^7.0.4", "@atlaskit/item@^7.0.5", "@atlaskit/item@^7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@atlaskit/item/-/item-7.0.8.tgz#324dfb81ce5f7e17955b5044e5c461c6e5ced030"
   dependencies:
-    "@atlaskit/theme" "^5.0.0"
-    babel-runtime "^6.26.0"
-    uuid "^3.1.0"
-
-"@atlaskit/item@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/item/-/item-8.0.0.tgz#a9251970e452ea0ff6a135670476863b40eda0fe"
-  dependencies:
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/theme" "^4.0.4"
     prop-types "^15.5.10"
     react-addons-text-content "^0.0.4"
     uuid "^3.1.0"
@@ -134,37 +123,27 @@
     react-scrolllock "^3.0.1"
     react-transition-group "^2.2.1"
 
-"@atlaskit/layer-manager@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/layer-manager/-/layer-manager-5.0.0.tgz#3efde5313d98f581df78e791f145d20133b133a8"
-  dependencies:
-    prop-types "^15.5.10"
-    react-focus-lock "^1.11.1"
-    react-scrolllock "^3.0.1"
-    react-transition-group "^2.2.1"
-
-"@atlaskit/layer@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/layer/-/layer-5.0.0.tgz#e9c86c6fd1530ab053cc2403f7e4897c5ffb89da"
+"@atlaskit/layer@^4.2.0":
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/layer/-/layer-4.2.0.tgz#66dcffb7b826159a7affaa763e566cd91c32b91c"
   dependencies:
     react-scrolllock "^3.0.1"
 
-"@atlaskit/navigation@^33.0.0":
-  version "33.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/navigation/-/navigation-33.0.0.tgz#7486567c183cdfa6ba62e79e0c82f22def918288"
+"@atlaskit/navigation@^32.2.2":
+  version "32.3.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/navigation/-/navigation-32.3.3.tgz#2c5b9514aced0f51b0dd2ded53e59118d8ac8810"
   dependencies:
-    "@atlaskit/analytics" "^4.0.0"
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/avatar" "^14.0.0"
-    "@atlaskit/blanket" "^7.0.0"
-    "@atlaskit/checkbox" "^4.0.0"
-    "@atlaskit/dropdown-menu" "^6.0.0"
-    "@atlaskit/icon" "^13.0.0"
-    "@atlaskit/item" "^8.0.0"
-    "@atlaskit/polyfills" "^3.0.0"
-    "@atlaskit/size-detector" "^5.0.0"
-    "@atlaskit/theme" "^5.0.0"
-    "@atlaskit/tooltip" "^11.0.0"
+    "@atlaskit/analytics" "^3.0.6"
+    "@atlaskit/avatar" "^13.0.0"
+    "@atlaskit/blanket" "^6.0.2"
+    "@atlaskit/checkbox" "^3.1.2"
+    "@atlaskit/dropdown-menu" "^5.2.3"
+    "@atlaskit/icon" "^12.6.1"
+    "@atlaskit/item" "^7.0.8"
+    "@atlaskit/polyfills" "^2.0.4"
+    "@atlaskit/size-detector" "^4.1.2"
+    "@atlaskit/theme" "^4.0.4"
+    "@atlaskit/tooltip" "^10.3.1"
     "@atlaskit/util-shared-styles" "^2.10.3"
     babel-runtime "^6.26.0"
     chromatism "^2.6.0"
@@ -177,45 +156,22 @@
     react-scrolllock "^3.0.1"
     react-transition-group "^2.2.1"
 
-"@atlaskit/page@^8.0.0":
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-8.0.0.tgz#c37a8e90dd82106e9f99a1504500f253e8132342"
+"@atlaskit/page@^7.0.1":
+  version "7.2.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-7.2.1.tgz#5d1c007c1e61df6d13c2b0098c1f578d9b038579"
 
-"@atlaskit/polyfills@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/polyfills/-/polyfills-3.0.0.tgz#f44cb311c5ec05969e963b2c77b30ad40f947a05"
+"@atlaskit/polyfills@^2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@atlaskit/polyfills/-/polyfills-2.0.4.tgz#8a2163f7366e289a94462697b7eb07b280cc225f"
 
-"@atlaskit/select@^4.4.0":
-  version "4.5.2"
-  resolved "https://registry.yarnpkg.com/@atlaskit/select/-/select-4.5.2.tgz#e924ba60c00348cd3b8e25d3bc124c980e0267d2"
-  dependencies:
-    "@atlaskit/icon" "^12.6.2"
-    "@atlaskit/spinner" "^8.0.0"
-    "@atlaskit/theme" "^4.0.4"
-    focus-trap "^2.4.5"
-    memoize-one "^3.0.1"
-    react-fast-compare "^2.0.1"
-    react-node-resolver "^1.0.1"
-    react-popper "^1.0.0"
-    react-select "^2.0.0-beta.7"
-    react-transition-group "^2.2.1"
-
-"@atlaskit/size-detector@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/size-detector/-/size-detector-5.0.0.tgz#aa07183b0b79d27d34efe1c51443f5bf4af1422c"
+"@atlaskit/size-detector@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/size-detector/-/size-detector-4.1.2.tgz#e3a8aa062bc2f2f338fd0c75e322eaee7eeb3838"
   dependencies:
     babel-runtime "^6.26.0"
     raf-schd "^2.1.0"
 
-"@atlaskit/spinner@9.0.0", "@atlaskit/spinner@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/spinner/-/spinner-9.0.0.tgz#000089c06d521ec9e8ced0de4944e55199369ba2"
-  dependencies:
-    "@atlaskit/theme" "^5.0.0"
-    babel-runtime "^6.26.0"
-    react-transition-group "^2.2.1"
-
-"@atlaskit/spinner@^8.0.0":
+"@atlaskit/spinner@8.0.0", "@atlaskit/spinner@^8.0.0":
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/spinner/-/spinner-8.0.0.tgz#bd075c7e001bc5f153a8897b82f2d77f1ddad715"
   dependencies:
@@ -229,19 +185,18 @@
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/theme@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-5.0.0.tgz#81a157a7e4dbbcb9701c5ec170e7c7e05b075a1f"
+"@atlaskit/theme@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-6.0.0.tgz#a638bf42d1042caf44e5c810121e3d83e7cd587c"
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/toggle@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-5.0.0.tgz#50479da697aab9bcaede560c2bd141c6f85d40f6"
+"@atlaskit/toggle@^4.0.3":
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-4.0.3.tgz#b79ef17b7c8ecccf7ca897c343f90b33ec53ffc5"
   dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/icon" "^13.0.0"
-    "@atlaskit/theme" "^5.0.0"
+    "@atlaskit/icon" "^12.1.2"
+    "@atlaskit/theme" "^4.0.4"
     uuid "^3.1.0"
 
 "@atlaskit/tooltip@^10.2.1", "@atlaskit/tooltip@^10.3.1":
@@ -250,16 +205,6 @@
   dependencies:
     "@atlaskit/layer-manager" "^4.2.1"
     "@atlaskit/theme" "^4.0.4"
-    react-deprecate "^0.1.0"
-    react-transition-group "^2.2.1"
-
-"@atlaskit/tooltip@^11.0.0":
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/@atlaskit/tooltip/-/tooltip-11.0.0.tgz#5d8081c86cfcd4a30f4726e316fd587699fd929a"
-  dependencies:
-    "@atlaskit/analytics-next" "^3.0.0"
-    "@atlaskit/layer-manager" "^5.0.0"
-    "@atlaskit/theme" "^5.0.0"
     react-deprecate "^0.1.0"
     react-transition-group "^2.2.1"
 
@@ -304,13 +249,6 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-get-function-arity/-/helper-get-function-arity-7.0.0-beta.44.tgz#d03ca6dd2b9f7b0b1e6b32c56c72836140db3a15"
   dependencies:
     "@babel/types" "7.0.0-beta.44"
-
-"@babel/helper-module-imports@7.0.0-beta.51":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/helper-module-imports/-/helper-module-imports-7.0.0-beta.51.tgz#ce00428045fbb7d5ebc0ea7bf835789f15366ab2"
-  dependencies:
-    "@babel/types" "7.0.0-beta.51"
-    lodash "^4.17.5"
 
 "@babel/helper-split-export-declaration@7.0.0-beta.44":
   version "7.0.0-beta.44"
@@ -372,54 +310,6 @@
     esutils "^2.0.2"
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
-
-"@babel/types@7.0.0-beta.51":
-  version "7.0.0-beta.51"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.0.0-beta.51.tgz#d802b7b543b5836c778aa691797abf00f3d97ea9"
-  dependencies:
-    esutils "^2.0.2"
-    lodash "^4.17.5"
-    to-fast-properties "^2.0.0"
-
-"@emotion/babel-utils@^0.6.4":
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/@emotion/babel-utils/-/babel-utils-0.6.5.tgz#34d7844eb532d1175c8fc70175beb74d071bfbeb"
-  dependencies:
-    "@emotion/hash" "^0.6.3"
-    "@emotion/memoize" "^0.6.3"
-    "@emotion/serialize" "^0.8.3"
-    convert-source-map "^1.5.1"
-    find-root "^1.1.0"
-    source-map "^0.7.2"
-
-"@emotion/hash@^0.6.2", "@emotion/hash@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.6.3.tgz#0e7a5604626fc6c6d4ac4061a2f5ac80d50262a4"
-
-"@emotion/memoize@^0.6.1", "@emotion/memoize@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.3.tgz#64379a1d6af6f8d4fe8bd6efe9d9e824ea4b22d8"
-
-"@emotion/serialize@^0.8.3":
-  version "0.8.3"
-  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.8.3.tgz#0fad55b9a97f9523e6b1fd6fb6f74b6cb41c7f8b"
-  dependencies:
-    "@emotion/hash" "^0.6.3"
-    "@emotion/memoize" "^0.6.3"
-    "@emotion/unitless" "^0.6.3"
-    "@emotion/utils" "^0.7.1"
-
-"@emotion/stylis@^0.6.10":
-  version "0.6.10"
-  resolved "https://registry.yarnpkg.com/@emotion/stylis/-/stylis-0.6.10.tgz#7d321e639ebc8ba23ace5990c20e94dcebb8f3dd"
-
-"@emotion/unitless@^0.6.2", "@emotion/unitless@^0.6.3":
-  version "0.6.3"
-  resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.6.3.tgz#65682e68a82701c70eefb38d7f941a2c0bfa90de"
-
-"@emotion/utils@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@emotion/utils/-/utils-0.7.1.tgz#e44e596d03c9f16ba3b127ad333a8a072bcb5a0a"
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
@@ -1889,7 +1779,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.x.x, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
+babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -1936,10 +1826,6 @@ babylon@7.0.0-beta.44:
 babylon@^6.16.1, babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
-
-babylon@^7.0.0-beta.30:
-  version "7.0.0-beta.47"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-7.0.0-beta.47.tgz#6d1fa44f0abec41ab7c780481e62fd9aafbdea80"
 
 bail@^1.0.0:
   version "1.0.3"
@@ -2919,18 +2805,6 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-emotion@^9.2.5:
-  version "9.2.5"
-  resolved "https://registry.yarnpkg.com/create-emotion/-/create-emotion-9.2.5.tgz#5db4f06d936025e43bd312453a3ee946e4d5e5db"
-  dependencies:
-    "@emotion/hash" "^0.6.2"
-    "@emotion/memoize" "^0.6.1"
-    "@emotion/stylis" "^0.6.10"
-    "@emotion/unitless" "^0.6.2"
-    csstype "^2.5.2"
-    stylis "^3.5.0"
-    stylis-rule-sheet "^0.0.10"
-
 create-error-class@^3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -3042,10 +2916,6 @@ css-color-names@0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/css-color-names/-/css-color-names-0.0.3.tgz#de0cef16f4d8aa8222a320d5b6d7e9bbada7b9f6"
 
-css-element-queries@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/css-element-queries/-/css-element-queries-0.3.2.tgz#535d80891b3af21395d005f19905fe5154b5ccff"
-
 css-loader@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-1.0.0.tgz#9f46aaa5ca41dbe31860e3b62b8e23c42916bf56"
@@ -3141,10 +3011,6 @@ cssom@0.3.x, "cssom@>= 0.3.2 < 0.4.0":
   dependencies:
     cssom "0.3.x"
 
-csstype@^2.5.2:
-  version "2.5.5"
-  resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.5.5.tgz#4125484a3d42189a863943f23b9e4b80fedfa106"
-
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
@@ -3200,14 +3066,6 @@ date-fns@^1.23.0, date-fns@^1.27.2:
 date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
-
-debounce@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.1.0.tgz#6a1a4ee2a9dc4b7c24bb012558dbcdb05b37f408"
-
-dateformat@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-3.0.3.tgz#a6e37499a4d9a9cf85ef5872044d62901c9889ae"
 
 debug@2.6.9, debug@^2.1.2, debug@^2.1.3, debug@^2.2.0, debug@^2.3.3, debug@^2.5.1, debug@^2.6.0, debug@^2.6.3, debug@^2.6.6, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
@@ -3792,19 +3650,6 @@ emoji-regex@^6.5.1:
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
-
-emotion-theming@^9.0.0:
-  version "9.2.5"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-9.2.5.tgz#f33f210f11c80e113641b34aec9e0bf9e04cbd89"
-  dependencies:
-    hoist-non-react-statics "^2.3.1"
-
-emotion@^9.1.1, emotion@^9.1.2:
-  version "9.2.5"
-  resolved "https://registry.yarnpkg.com/emotion/-/emotion-9.2.5.tgz#666fb151a69c25c7582ff3de06f60f8d848f74aa"
-  dependencies:
-    babel-plugin-emotion "^9.2.5"
-    create-emotion "^9.2.5"
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -4504,7 +4349,7 @@ fbjs-scripts@^0.8.3:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.16, fbjs@^0.8.5:
+fbjs@^0.8.16, fbjs@^0.8.5:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -4685,12 +4530,6 @@ flush-write-stream@^1.0.0:
 focus-lock@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.3.0.tgz#cd9f9ecb279cb0f09b306b5ae713e6dd58fd15ed"
-
-focus-trap@^2.4.5:
-  version "2.4.6"
-  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-2.4.6.tgz#332b475b317cec6a4a129f5307ce7ebc0da90b40"
-  dependencies:
-    tabbable "^1.0.3"
 
 follow-redirects@^1.0.0:
   version "1.5.1"
@@ -5091,10 +4930,6 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
 
-gud@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
-
 gzip-size@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/gzip-size/-/gzip-size-4.1.0.tgz#8ae096257eabe7d69c45be2b67c448124ffb517c"
@@ -5256,11 +5091,11 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoek@4.x.x:
-  version "4.2.1"
-  resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
+hoek@2.x.x:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.5.0:
   version "2.5.5"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.5.tgz#c5903cf409c0dfd908f388e619d86b9c1174cb47"
 
@@ -8020,10 +7855,6 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
-popper.js@^1.14.1:
-  version "1.14.3"
-  resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.14.3.tgz#1438f98d046acf7b4d78cd502bf418ac64d4f095"
-
 portfinder@^1.0.9:
   version "1.0.13"
   resolved "https://registry.yarnpkg.com/portfinder/-/portfinder-1.0.13.tgz#bb32ecd87c27104ae6ee44b5a3ccbf0ebb1aede9"
@@ -8468,10 +8299,6 @@ react-dom@^16.4.0:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-fast-compare@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.1.tgz#92c91ac4814aa8cfcfb04780ad1bfff2bbe3a3c6"
-
 react-focus-lock@^1.11.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.11.1.tgz#6e8a1bdef14f0f04673a26e27b415e3d671f2762"
@@ -8491,12 +8318,6 @@ react-hot-loader@^4.2.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
 
-react-input-autosize@^2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/react-input-autosize/-/react-input-autosize-2.2.1.tgz#ec428fa15b1592994fb5f9aa15bb1eb6baf420f8"
-  dependencies:
-    prop-types "^15.5.8"
-
 react-is@^16.3.1, react-is@^16.4.1:
   version "16.4.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.1.tgz#d624c4650d2c65dbd52c72622bbf389435d9776e"
@@ -8504,21 +8325,6 @@ react-is@^16.3.1, react-is@^16.4.1:
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
-
-react-node-resolver@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-node-resolver/-/react-node-resolver-1.0.1.tgz#1798a729c0e218bf2f0e8ddf79c550d4af61d83a"
-
-react-popper@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-popper/-/react-popper-1.0.0.tgz#b99452144e8fe4acc77fa3d959a8c79e07a65084"
-  dependencies:
-    babel-runtime "6.x.x"
-    create-react-context "^0.2.1"
-    popper.js "^1.14.1"
-    prop-types "^15.6.1"
-    typed-styles "^0.0.5"
-    warning "^3.0.0"
 
 react-reconciler@^0.7.0:
   version "0.7.0"
@@ -8576,17 +8382,6 @@ react-scrolllock@^3.0.1:
   resolved "https://registry.yarnpkg.com/react-scrolllock/-/react-scrolllock-3.0.1.tgz#76955fef2de5bfba677166b36ce4eb28231b37a9"
   dependencies:
     exenv "^1.2.2"
-
-react-select@^2.0.0-beta.7:
-  version "2.0.0-beta.7"
-  resolved "https://registry.yarnpkg.com/react-select/-/react-select-2.0.0-beta.7.tgz#db1183d359136d26fe56399c86d37a7f96fea33a"
-  dependencies:
-    classnames "^2.2.5"
-    emotion "^9.1.2"
-    prop-types "^15.6.0"
-    raf "^3.4.0"
-    react-input-autosize "^2.2.1"
-    react-transition-group "^2.2.1"
 
 react-side-effect@^1.1.3:
   version "1.1.5"
@@ -9062,17 +8857,15 @@ resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
 
+resolve@1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
+
 resolve@^1.4.0, resolve@^1.5.0, resolve@^1.6.0:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.8.1.tgz#82f1ec19a423ac1fbd080b0bab06ba36e84a7a26"
   dependencies:
     path-parse "^1.0.5"
-
-responselike@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"
-  dependencies:
-    lowercase-keys "^1.0.0"
 
 restore-cursor@^1.0.1:
   version "1.0.1"
@@ -9532,10 +9325,6 @@ source-map@^0.5.0, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, sour
 source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-
-source-map@^0.7.2:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
 
 spawn-command@^0.0.2-1:
   version "0.0.2-1"
@@ -10089,10 +9878,6 @@ synesthesia@^1.0.1:
   dependencies:
     css-color-names "0.0.3"
 
-tabbable@^1.0.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-1.1.3.tgz#0e4ee376f3631e42d7977a074dbd2b3827843081"
-
 table@^4.0.1, table@^4.0.2, table@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/table/-/table-4.0.3.tgz#00b5e2b602f1794b9acaf9ca908a76386a7813bc"
@@ -10276,17 +10061,17 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
 
-touch@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/touch/-/touch-1.0.0.tgz#449cbe2dbae5a8c8038e30d71fa0ff464947c4de"
-  dependencies:
-    nopt "~1.0.10"
-
 tough-cookie@>=2.3.3, tough-cookie@^2.3.3:
   version "2.4.3"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.4.3.tgz#53f36da3f47783b0925afa06ff9f3b165280f781"
   dependencies:
     psl "^1.1.24"
+    punycode "^1.4.1"
+
+tough-cookie@~2.3.0, tough-cookie@~2.3.3:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-2.3.4.tgz#ec60cee38ac675063ffc97a5c18970578ee83655"
+  dependencies:
     punycode "^1.4.1"
 
 tr46@^1.0.1:
@@ -10377,10 +10162,6 @@ type-is@~1.6.15, type-is@~1.6.16:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.18"
-
-typed-styles@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/typed-styles/-/typed-styles-0.0.5.tgz#a60df245d482a9b1adf9c06c078d0f06085ed1cf"
 
 typedarray@^0.0.6:
   version "0.0.6"
@@ -10535,15 +10316,6 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
-
-unstated@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/unstated/-/unstated-1.2.0.tgz#5c57cc077473d2cce411ec0930da285cef3df306"
-  dependencies:
-    create-react-context "^0.1.5"
-untildify@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/untildify/-/untildify-3.0.3.tgz#1e7b42b140bcfd922b22e70ca1265bfe3634c7c9"
 
 unzip-response@^2.0.1:
   version "2.0.1"
