@@ -203,7 +203,7 @@
     "@atlaskit/badge": "^9.1.2",
     "@atlaskit/icon": "^12.2.0",
     "@atlaskit/navigation": "^32.2.2",
-    "@atlaskit/page": "^7.0.1",
+    "@atlaskit/page": "^8.0.4",
     "@atlaskit/toggle": "^4.0.3",
     "@vx/gradient": "^0.0.165",
     "@vx/group": "^0.0.170",
