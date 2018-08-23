@@ -164,9 +164,9 @@
     react-scrolllock "^3.0.1"
     react-transition-group "^2.2.1"
 
-"@atlaskit/page@^7.0.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-7.2.1.tgz#5d1c007c1e61df6d13c2b0098c1f578d9b038579"
+"@atlaskit/page@^8.0.4":
+  version "8.0.4"
+  resolved "https://registry.yarnpkg.com/@atlaskit/page/-/page-8.0.4.tgz#8869d9a700e952b258ed61b6348030a76dc1a4a2"
 
 "@atlaskit/polyfills@^2.0.4":
   version "2.0.4"
