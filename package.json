@@ -202,7 +202,7 @@
     "@atlaskit/avatar": "^11.2.0",
     "@atlaskit/badge": "^9.1.2",
     "@atlaskit/icon": "^13.3.1",
-    "@atlaskit/navigation": "^32.2.2",
+    "@atlaskit/navigation": "^33.1.7",
     "@atlaskit/page": "^8.0.4",
     "@atlaskit/toggle": "^4.0.3",
     "@vx/gradient": "^0.0.165",
