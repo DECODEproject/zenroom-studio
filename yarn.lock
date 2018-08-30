@@ -16,6 +16,12 @@
   dependencies:
     prop-types "^15.5.10"
 
+"@atlaskit/analytics-next@^3.0.6":
+  version "3.0.7"
+  resolved "https://registry.yarnpkg.com/@atlaskit/analytics-next/-/analytics-next-3.0.7.tgz#83fd1c011e12f09195ad85163a937d5d8e414c36"
+  dependencies:
+    prop-types "^15.5.10"
+
 "@atlaskit/analytics@^3.0.6":
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/@atlaskit/analytics/-/analytics-3.0.6.tgz#b9dd682015305f98cd80bdf92f602264d0e4c9ba"
@@ -97,7 +103,7 @@
     keycode "^2.1.7"
     prop-types "^15.5.10"
 
-"@atlaskit/icon@^12.1.2", "@atlaskit/icon@^12.3.1", "@atlaskit/icon@^12.6.1":
+"@atlaskit/icon@^12.3.1", "@atlaskit/icon@^12.6.1":
   version "12.8.0"
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-12.8.0.tgz#44095171300c664834937593b32b3b8515745eaa"
   dependencies:
@@ -110,6 +116,14 @@
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-13.3.1.tgz#5de43e798a0eaacb23aa16a67f39062beb7eacd4"
   dependencies:
     "@atlaskit/theme" "^6.0.1"
+    babel-runtime "^6.26.0"
+    uuid "^3.1.0"
+
+"@atlaskit/icon@^13.6.1":
+  version "13.6.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-13.6.1.tgz#e4a5fe45858d7a47534999265d8312d51da4479b"
+  dependencies:
+    "@atlaskit/theme" "^6.0.2"
     babel-runtime "^6.26.0"
     uuid "^3.1.0"
 
@@ -205,12 +219,19 @@
   dependencies:
     prop-types "^15.5.10"
 
-"@atlaskit/toggle@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-4.0.3.tgz#b79ef17b7c8ecccf7ca897c343f90b33ec53ffc5"
+"@atlaskit/theme@^6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-6.0.2.tgz#c9b7c7e03cb44f7999d74dc475f4248fc3438e8f"
   dependencies:
-    "@atlaskit/icon" "^12.1.2"
-    "@atlaskit/theme" "^4.0.4"
+    prop-types "^15.5.10"
+
+"@atlaskit/toggle@^5.0.8":
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/@atlaskit/toggle/-/toggle-5.0.8.tgz#5f06322b593e235dc4858111d7496ef5504d45e0"
+  dependencies:
+    "@atlaskit/analytics-next" "^3.0.6"
+    "@atlaskit/icon" "^13.6.1"
+    "@atlaskit/theme" "^6.0.2"
     uuid "^3.1.0"
 
 "@atlaskit/tooltip@^10.2.1", "@atlaskit/tooltip@^10.3.1":
