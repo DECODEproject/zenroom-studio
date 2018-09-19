@@ -209,7 +209,7 @@
     "@vx/group": "^0.0.170",
     "@vx/hierarchy": "^0.0.170",
     "@vx/shape": "^0.0.171",
-    "@vx/responsive": "^0.0.172",
+    "@vx/responsive": "^0.0.175",
     "d3-hierarchy": "^1.1.6",
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
