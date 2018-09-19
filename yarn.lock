@@ -405,9 +405,9 @@
   version "0.0.165"
   resolved "https://registry.yarnpkg.com/@vx/point/-/point-0.0.165.tgz#7ebde5da3d86954fe31a56f923f31550f0b4b867"
 
-"@vx/responsive@^0.0.172":
-  version "0.0.172"
-  resolved "https://registry.yarnpkg.com/@vx/responsive/-/responsive-0.0.172.tgz#26db0b946bcb0b1db2025c097c0b365f21ba033d"
+"@vx/responsive@^0.0.175":
+  version "0.0.175"
+  resolved "https://registry.yarnpkg.com/@vx/responsive/-/responsive-0.0.175.tgz#3b2368ca5a53b368127c9a698a48117d216a8bf8"
   dependencies:
     lodash "^4.17.10"
     prop-types "^15.6.1"
